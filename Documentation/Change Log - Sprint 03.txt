@@ -40,10 +40,37 @@ Date: 10/03/2015
 	Tweaked level editor a bunch
 
 Day 8 Scrum Meeting
+Date: 10/04/2015
 	Tweaked level editor a ton
 	made a couple of levels
 	started to convert the lair into a dungeon
 
+Day 9 Scrum Meeting
+Date: 10/05/2015
+	Tweaked level editor further (added stairs and doodads and a few other features)
+	
+Day 10
+Date: 10/06/2015
+	added initial enemy generation
+	
+Day 11
+Date: 10/07/2015
+	Researched Dlls and extensions to try and remove lag
+	
+Day 12
+Date: 10/08/2015
+	Did more research, solution failed
+	
+Day 13
+Date: 10/09/2015
+	Drew Some Graphics
+	tried to fix critical errors in
+
+Day 14
+Date: 10/10/2015
+	Worked Feverishly to fix the stuff that broke when switching
+	
+	
 By the next daily scrum I will:
 	1. Add Doodads and NPCs to The Level Editor
 	2. Create the lair in the Level Editor

@@ -1,0 +1,41 @@
+SCRUM LOG - Sprint 04
+start date: 09/11/2015
+end date: 10/24/2015
+
+Day 1 Scrum Meeting:
+Date: 09/11/2015
+	Worked to fix gamemaker:studio
+	
+Day 2 Scrum Meeting:
+Date: 09/12/2015
+	improved the stage builder
+		made stage builder run tile assignment algorithm
+		made stage builder create separate save files and added loading functionality
+		made stage builder export enemies
+		fixed some stuff that made doors spawn incorrectly
+	condensed tile sprites to halve the burden of generating and destroying tiles,
+
+Day 3 Scrum Meeting:
+Date: 09/13/2015
+	worked on Halloween costume
+
+Day 4 Scrum Meeting:
+Date: 09/14/2015
+	worked on Halloween costume
+	fixed messages(need to make them not look terrible)
+	added the back&forward button functionality (a little wonky with keyboard input)
+	dungeon spawns now, but moving between rooms is still bugged, something to do with startlocation(probably an array problem)
+	
+Day 5 Scrum Meeting
+Date: 10/15/2015
+	Impediments: graphics lab, project proposal, halloween costume
+	
+By the next daily scrum I will:
+	1. FIX DOORS
+	2. FIX MULTIPLAYER
+	3. PET PEEVE!: MAKE THOSE DUMB MSLOBBY THINGS PERSISTENT
+	4. Fix Terrible UI
+	5. Create the lair in the Level Editor
+	6. Clean up your act and fix broken dialog and shop menus, even if they aren't perfect. at least don't crash the game over it
+	7. Add the skills and abilities panel in the start menu
+	8. Apply the skills on load 

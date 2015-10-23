@@ -142,3 +142,48 @@ Sprint 03 Goals:
 		Please try to give some indication in game of whether a given functionality is working or not
 		This mostly applies to all the skills and traits we aren't currently supporting
 		Don't just write stuff in the game to help you remember
+
+	Conclusion: Definitely the worst sprint so far. The only thing we really did was streamline room generation. We did a lot of knowledge acquisition, and spent a lot of time porting the game over to gamemaker:studio. We did work on some graphics assets, but not nearly what I hoped to accomplish. So in the end, we did not complete a single item on the list. Impediments were midterms, a lot of homework, and gamemaker suddenly breaking on me. also that halloween costume took a lot of time.
+	
+Sprint 04:
+start date: 09/11/2015
+end date: 10/24/2015
+
+Sprint 04 Goals:
+	1. Fix the broken Stuff in Gamemaker:Studio
+		Everything related to Multiplayer
+		Creation-based depth-sensitive menus
+	2. Improved (non-embarrassing) Enemy AI
+		fix that stupid path finding algorithm
+		give a little nuance to enemy movement, don't just dog the footsteps of the players
+		make enemies update in multiplayer at each step
+	3. Greater variety of enemies
+		static shooter (like the eyeballs in rogue legacy)
+		flying harasser (like the charites in rogue legacy)
+	4. Complete Basic Abilities
+		make sure that all the starting abilities work in single player and multiplayer
+		apply poison: revisit poison system
+		critical strike: modify damage on each attack (or hit)
+		reflexes: just make sure it works in multiplayer
+		shadow meld: change to smoke bomb or something. work on aggro
+	5. Add on-screen feedback and start menu descriptions of abilities and skills
+		draw the hotkey for each ability on the UI
+		give some indication that the ability slots can be toggled;
+		make something in the start menu to check traits, skills, and abilities
+	6. Fix the Dialogue and Shop Menus
+		resize them and update broken variable names
+		make them work with xbox controller
+	7. Put Enemy Drops back in
+		maybe enemies just drop corpses, and you get the items when you loot the corpse while you eat it
+	8. Skills and Traits Actually do stuff
+		just call their event1 on charload, and add functions as neccessary
+	9. Witchdoctor
+		we already have 3 of the abilities, just add them
+		The kicker is that we also need the sprites, so only do this if you have time
+	10. Shopkeeper
+		This basically amounts to making another couple of sprites (albeit mostly stationary ones)
+		Don't forget to make a portrait, and maybe even a big portrait if you improve the dialogue system
+	11. In-game documentation
+		Please try to give some indication in game of whether a given functionality is working or not
+		This mostly applies to all the skills and traits we aren't currently supporting
+		Don't just write stuff in the game to help you remember
