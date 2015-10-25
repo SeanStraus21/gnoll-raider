@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///set sprite, direction, and variables
+
 xspd = 0;
 yspd = 0;
 zspd = 0;

@@ -156,3 +156,11 @@ sprSW[11] = spr_enemy_boss_SW;
 sprEE[11] = spr_enemy_boss_EE;
 sprWW[11] = spr_enemy_boss_WW;
 
+sprNN[12] = spr_enemy_zombie_NN;
+sprNE[12] = spr_enemy_zombie_NE;
+sprNW[12] = spr_enemy_zombie_NW;
+sprSS[12] = spr_enemy_zombie_SS;
+sprSE[12] = spr_enemy_zombie_SE;
+sprSW[12] = spr_enemy_zombie_SW;
+sprEE[12] = spr_enemy_zombie_EE;
+sprWW[12] = spr_enemy_zombie_WW;

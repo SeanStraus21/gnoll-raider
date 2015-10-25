@@ -36,9 +36,12 @@
 random_set_seed(dungeon_seed);
 chamber_list = ds_list_create();
 door_list = ds_list_create();
-npc_type_list = ds_list_create();
-ds_list_add(npc_type_list,obj_enemy_evileye);
-ds_list_add(npc_type_list,obj_enemy_zombie);
+npc_type_list_ground_small = ds_list_create();
+npc_type_list_ground_medium = ds_list_create();
+npc_type_list_ground_large = ds_list_create();
+npc_type_list_air_small = ds_list_create();
+npc_type_list_air_medium = ds_list_create();
+npc_type_list_air_large = ds_list_create();
 tileset = instance_create(0,0,obj_tileset_dismalwaste);
 //generate maze
 maze_h = 2;

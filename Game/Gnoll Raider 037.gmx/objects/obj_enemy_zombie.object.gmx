@@ -69,10 +69,10 @@ atk_dur = 5;
 atk_range = 64;
 
 //ability settings
-abl_cd = -1;
-abl_ready = false;
-abl_dur = -1;
-abl_range = 0;
+npc_abl_cd = -1;
+npc_abl_ready = false;
+npc_abl_dur = -1;
+npc_abl_range = 0;
 
 channel_timer = -1;
 action_index = -1;
@@ -99,7 +99,7 @@ yspd = 0;
 zspd = 0;
 
 //graphics
-spr_ind = 10;
+spr_ind = 12;
 image_speed = 0.25;
 
 //set aggro
@@ -384,7 +384,7 @@ case 4: //channel ability, etc.
           <argument>
             <kind>1</kind>
             <string>///set sprite stuff
-/*ZOMBIE HAS GOT NO ANIMATIONS YET
+
 if (xprevious != x &amp;&amp; yprevious != y){ // if moving, have sprite move, else stop
   //change sprite to walking or standing depending on stuff
   dir_move = point_direction(xprevious,yprevious,x,y);

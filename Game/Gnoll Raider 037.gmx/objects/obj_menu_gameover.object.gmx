@@ -157,7 +157,8 @@ When they're roughly the size of a troll.# - Gnoll Death Poem";
           <argument>
             <kind>1</kind>
             <string>///Go Home
-
+with crnt_dungeon{instance_destroy();}
+crnt_dungeon = instance_create(0,0,obj_dungeon_yahazeer);
 global.startx = 944;
 global.starty = 304;
 room_goto(room_lair01);

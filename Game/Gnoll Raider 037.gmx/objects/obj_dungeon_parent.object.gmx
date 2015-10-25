@@ -34,11 +34,20 @@ with obj_abstract_door{
 with obj_cell_parent{
     instance_destroy();
 }
+with tileset{
+    instance_destroy();
+}
 tile_layer_delete(2);
 
 ds_list_destroy(chamber_list);
 ds_list_destroy(door_list);
-ds_list_destroy(npc_type_list);
+
+ds_list_destroy(npc_type_list_ground_small);
+ds_list_destroy(npc_type_list_ground_medium);
+ds_list_destroy(npc_type_list_ground_large);
+ds_list_destroy(npc_type_list_air_small);
+ds_list_destroy(npc_type_list_air_medium);
+ds_list_destroy(npc_type_list_air_large);
 </string>
           </argument>
         </arguments>
@@ -66,7 +75,7 @@ with (destined_chamber){
   var l,crnt_npc;
   l = ds_list_size(npc_list);
   for(i=l-1;i&gt;=0;i-=1){
-    crnt_npc = ds_list_find_value(npc_list,i);
+    crnt_npc = npc_list[|i];
     if (instance_exists(crnt_npc.manifestation)){
       crnt_npc.npc_x = crnt_npc.manifestation.x;
       crnt_npc.npc_y = crnt_npc.manifestation.y;

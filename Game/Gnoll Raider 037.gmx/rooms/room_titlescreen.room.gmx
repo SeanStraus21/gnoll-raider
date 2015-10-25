@@ -11,6 +11,7 @@
   <colour>0</colour>
   <showcolour>-1</showcolour>
   <code>//Initialize Game
+randomize();//set the game to be random
 declare_global_variables();
 declare_ability_tables();
 declare_skill_tables();

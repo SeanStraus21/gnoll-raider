@@ -115,6 +115,7 @@
       <sprite>sprites\spr_portal_horizontalx64</sprite>
       <sprite>sprites\spr_door_dismalwaste</sprite>
       <sprite>sprites\spr_door_badlands</sprite>
+      <sprite>sprites\spr_pathing_door</sprite>
     </sprites>
     <sprites name="Pathing Blockers">
       <sprite>sprites\spr_pathing16x16</sprite>
@@ -167,6 +168,14 @@
       </sprites>
       <sprites name="Zombie">
         <sprite>sprites\spr_zombie</sprite>
+        <sprite>sprites\spr_enemy_zombie_SE</sprite>
+        <sprite>sprites\spr_enemy_zombie_EE</sprite>
+        <sprite>sprites\spr_enemy_zombie_NE</sprite>
+        <sprite>sprites\spr_enemy_zombie_NN</sprite>
+        <sprite>sprites\spr_enemy_zombie_NW</sprite>
+        <sprite>sprites\spr_enemy_zombie_WW</sprite>
+        <sprite>sprites\spr_enemy_zombie_SW</sprite>
+        <sprite>sprites\spr_enemy_zombie_SS</sprite>
       </sprites>
       <sprites name="Boss">
         <sprite>sprites\spr_enemy_boss</sprite>
@@ -435,11 +444,7 @@
       <script>scripts\generate_chamber.gml</script>
       <script>scripts\generate_dungeon.gml</script>
       <script>scripts\get_adjacent_chambers.gml</script>
-      <script>scripts\get_adjacent_cells.gml</script>
-      <script>scripts\place_available.gml</script>
       <script>scripts\generate_door.gml</script>
-      <script>scripts\generate_entrances.gml</script>
-      <script>scripts\generate_npcs.gml</script>
     </scripts>
     <scripts name="Character Scripts">
       <script>scripts\gnoll_jump.gml</script>
@@ -461,8 +466,13 @@
       <script>scripts\generate_chamber_01.gml</script>
       <script>scripts\generate_chamber_02.gml</script>
       <script>scripts\generate_chamber_03.gml</script>
-      <scripts name="lair schematics">
-        <script>scripts\generate_chamber_lair_0.gml</script>
+      <script>scripts\generate_chamber_04.gml</script>
+      <script>scripts\generate_chamber_05.gml</script>
+      <scripts name="special">
+        <script>scripts\generate_stairchamber_00.gml</script>
+        <scripts name="lair schematics">
+          <script>scripts\generate_chamber_lair_0.gml</script>
+        </scripts>
       </scripts>
     </scripts>
     <scripts name="Networking">
@@ -491,6 +501,7 @@
   </fonts>
   <objects name="objects">
     <objects name="Control">
+      <object>objects\object0</object>
       <object>objects\obj_control</object>
       <object>objects\obj_slavecontrol</object>
       <object>objects\obj_mastercontrol</object>
@@ -588,6 +599,8 @@
       <objects name="Enemies">
         <object>objects\obj_enemy_parent</object>
         <object>objects\obj_enemy_evileye</object>
+        <object>objects\obj_enemy_cryptthing</object>
+        <object>objects\obj_enemy_corruptknight</object>
         <object>objects\obj_enemy_zombie</object>
         <object>objects\obj_enemy_boss</object>
         <object>objects\obj_enemy_birthanim_parent</object>
@@ -771,6 +784,11 @@
       <object>objects\obj_pathing_blocker</object>
       <object>objects\obj_wall</object>
       <object>objects\obj_isoblock_n</object>
+      <objects name="NPC Spawn Locations">
+        <object>objects\obj_npcspawn_parent</object>
+        <object>objects\obj_enemyspawn_g_l_ex</object>
+        <object>objects\obj_enemyspawn_g_m_ex</object>
+      </objects>
     </objects>
     <objects name="Ability Objects">
       <object>objects\obj_abl_applypoison</object>

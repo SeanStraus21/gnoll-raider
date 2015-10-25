@@ -68,10 +68,10 @@ atk_ready = true;
 atk_dur = 5;
 atk_range = 128;
 //ability settings
-abl_cd = 300;
-abl_ready = true;
-abl_dur = 8;
-abl_range = 128;
+npc_abl_cd = 300;
+npc_abl_ready = true;
+npc_abl_dur = 8;
+npc_abl_range = 128;
 
 channel_timer = -1;
 action_index = -1;
@@ -322,9 +322,9 @@ case 1: //combat
   if (target != noone){
     //if cooldown is up and enemy is in range
         //{attack;}
-    if(abl_ready &amp;&amp; (point_distance(x,y,target.x,target.y) &lt;= abl_range)){
+    if(npc_abl_ready &amp;&amp; (point_distance(x,y,target.x,target.y) &lt;= npc_abl_range)){
       behavior = 4;
-      channel_timer = abl_dur;  
+      channel_timer = npc_abl_dur;  
       action_index = 1;
       image_speed = 0;
     }else if (atk_ready &amp;&amp; (point_distance(x,y,target.x,target.y) &lt;= atk_range)){
@@ -542,8 +542,8 @@ for(i=0;i&lt;8;i+=1){
   lastcreated.speed = 4;
   lastcreated.alarm[0] = 64/4;
 }
-abl_ready = false;
-alarm[1] = abl_cd;
+npc_abl_ready = false;
+alarm[1] = npc_abl_cd;
 </string>
           </argument>
         </arguments>

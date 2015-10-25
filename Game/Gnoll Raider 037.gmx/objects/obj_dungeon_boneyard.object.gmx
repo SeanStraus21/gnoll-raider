@@ -34,32 +34,42 @@
   slave_sendall();
 }
 random_set_seed(dungeon_seed);
+tileset = instance_create(0,0,obj_tileset_dismalwaste);
 chamber_list = ds_list_create();
 door_list = ds_list_create();
-npc_type_list = ds_list_create();
-ds_list_add(npc_type_list,obj_enemy_evileye);
-ds_list_add(npc_type_list,obj_enemy_zombie);
-tileset = instance_create(0,0,obj_tileset_dismalwaste);
+
+//Enemy Type Lists
+npc_type_list_ground_small = ds_list_create();
+npc_type_list_ground_medium = ds_list_create();
+npc_type_list_ground_large = ds_list_create();
+npc_type_list_air_small = ds_list_create();
+npc_type_list_air_medium = ds_list_create();
+npc_type_list_air_large = ds_list_create();
+ds_list_add(npc_type_list_ground_medium,obj_enemy_evileye);
+ds_list_add(npc_type_list_ground_medium,obj_enemy_zombie);
+ds_list_add(npc_type_list_ground_large,obj_enemy_cryptthing);
+ds_list_add(npc_type_list_ground_large,obj_enemy_corruptknight);
+
+//Chamber Schematics List
 chamber_schematics_list = ds_list_create();
 ds_list_add(chamber_schematics_list,generate_chamber_01);
 ds_list_add(chamber_schematics_list,generate_chamber_02);
 ds_list_add(chamber_schematics_list,generate_chamber_03);
 
-//generate maze
-maze_h = 9;
-maze_w = 9;
-grid_w = 128;
-
+//Generate Dungeon
+maze_h = 2;
+maze_w = 2;
 generate_dungeon();
-//generate starting chamber
+
+//Generate Initial Chamber
 with destined_chamber{
   is_defined = true;
-  generate_chamber();
+  generate_chamber(rw,rh);
 }
-//set start location
 
-global.startx = (destined_chamber.start_location.cell_x);
-global.starty = (destined_chamber.start_location.cell_y);
+//Set Global Start Location
+global.startx = (destined_chamber.startlocation_main.cell_x);
+global.starty = (destined_chamber.startlocation_main.cell_y);
 
 </string>
           </argument>
