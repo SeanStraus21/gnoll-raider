@@ -14,7 +14,7 @@ Why does this matter? well, for one thing, yoyo games, the company that develope
 I eventually found out that I could circumvent this by turning off my wireless before opening gamemaker, but since I already switched over, I decided to stick with it.
 Although I would have preferred to make the switch on my own terms, it looks like this was probably for the best. Gamemaker:studio is much better for two important reasons:
 1. It is compiled instead of interpreted (it is a million times faster)
-2. It is cross-platform (You can play it on linux and mac)
+2. It has non-worthless collision detection
 Truth be told, I had actually spent the last couple of weeks trying to write a physics extension in C++ since gamemaker 8.1's built in line of sight functions are worthless for what I need them for and game maker is too slow to allow me to write my own in GML. It was probably quicker to switch to studio than to write the dll.
 
 Unfortunately, this broke all the menus, all the message boxes, all the multiplayer (which relied on a dll. gamemaker:studio does not support dlls), and anything involving saving stuff to text files.
