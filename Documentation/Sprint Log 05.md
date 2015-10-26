@@ -1,10 +1,10 @@
-SCRUM LOG - Sprint 05
-start date: 10/25/2015
-end date: 11/07/2015
+Sprint Log 05 <br>
+start date: 10/25/2015 <br>
+end date: 11/07/2015 <br>
 
 Day 1 Scrum Meeting:
 Date: 10/25/2015
-	fixed a bug with pop-up menus in the multiplayer lobby
+ - fixed a bug with pop-up menus in the multiplayer lobby
 	
 By the next daily scrum I will:
 	1. TEST MULTIPLAYER
