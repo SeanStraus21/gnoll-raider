@@ -187,3 +187,23 @@ Sprint 04 Goals:
 		Please try to give some indication in game of whether a given functionality is working or not
 		This mostly applies to all the skills and traits we aren't currently supporting
 		Don't just write stuff in the game to help you remember
+
+	Conclusion: Well, we did some stuff, just none of the stuff we wanted to do. The game is still terrible, even though we have finished all the basic components of the stage editor. Level design still sucks, since we only have walls and floors and doors. the HUD is still a piece of garbage, and the UI is still awful. So basically, we spent this sprint fixing bugs and upgrading the level editor.
+	
+Sprint 05:
+start date: 10/25/2015
+end date: 11/07/2015
+
+Sprint 05 Goals:
+	1. Revise User Interface
+		Upgrade HUD, including separate HUD schemes for keyboard and xbox controller
+		Revise Keyboard Hotkey layout (do not insist on 1-to-1 correspondence with xbox)
+		Upgrade menus and stuff to be more convenient.
+	2. Enemy AI
+		line of sight checking
+		more complex movement (avoid clumping up, getting hit, etc.)
+		different tactics for different enemies
+		hitboxes and stuff
+	3. make abilities at least non-broken.
+	4. If you make it this far, go improve the level design
+		

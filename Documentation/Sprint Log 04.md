@@ -72,14 +72,6 @@ Date: 10/23/2015
 
 Day 14
 Date: 10/24/2015
+	worked on documentation
+	fixed a highly baffling bug
 	
-	
-By the next daily scrum I will:
-	1. TEST MULTIPLAYER
-	2. Fix Terrible HUD
-	3. Fix Terrible UI
-	4. Fix Terrible AI
-	5. Create the lair in the Level Editor
-	6. Clean up your act and fix broken dialog and shop menus, even if they aren't perfect. at least don't crash the game over it
-	7. Add the skills and abilities panel in the start menu
-	8. Apply the skills on load 

@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///set variables
+active = true;
 globalvar server;
 server = -1;
 global.returning = false;
@@ -165,91 +166,92 @@ if (temp_socket &lt; 0){
           <argument>
             <kind>1</kind>
             <string>///Process Input
-
-if(confirm_btn){//press enter
-  event_user(1);
-  io_clear2();
-}else{  //check arrowkeys
-  var xpos, ypos;
-  xpos = hovered.btn_column;
-  ypos = hovered.btn_row;
-  
-  //move left
-  if(arrow_left){
-    if (xpos &gt; 0){
-      xpos -= 1;
-    }else{
-      xpos = width-1;
-    }
-    if(!btn_array[xpos,0].empty){
-      ypos = 0;
-    }else{
-      xpos = hovered.btn_column;
-    }
+if(active){
+  if(confirm_btn){//press enter
+    event_user(1);
     io_clear2();
-  }
-  
-  //move right
-  if(arrow_right){
-    if(!btn_array[(xpos+1)mod width,0].empty){
-      xpos = (xpos+1)mod width;
-      ypos = 0;
-    }
-    io_clear2();
-  }
-  
-  //move up
-  if(arrow_up){
-    if (xpos == width-1 || ypos &gt; 0){
-     if (ypos &gt; 0){
-        ypos -= 1;
+  }else{  //check arrowkeys
+    var xpos, ypos;
+    xpos = hovered.btn_column;
+    ypos = hovered.btn_row;
+    
+    //move left
+    if(arrow_left){
+      if (xpos &gt; 0){
+        xpos -= 1;
       }else{
-        ypos = height-1;
+        xpos = width-1;
       }
-      for(i=ypos;btn_array[xpos,i].empty;i+=0){
-        if (i &gt; 0){
-          i -= 1;
+      if(!btn_array[xpos,0].empty){
+        ypos = 0;
+      }else{
+        xpos = hovered.btn_column;
+      }
+      io_clear2();
+    }
+    
+    //move right
+    if(arrow_right){
+      if(!btn_array[(xpos+1)mod width,0].empty){
+        xpos = (xpos+1)mod width;
+        ypos = 0;
+      }
+      io_clear2();
+    }
+    
+    //move up
+    if(arrow_up){
+      if (xpos == width-1 || ypos &gt; 0){
+       if (ypos &gt; 0){
+          ypos -= 1;
         }else{
-          i = height-1;
+          ypos = height-1;
         }
-      }//scroll up the column to find the next non-empty space
-      ypos = i; 
-    }else if(line_index &gt; 0){//xpos &lt; width-1 &amp;&amp; ypos &lt;= 0
-      //scroll up the page
-      line_index -= 1;
-      scrollbtn_down.image_index = 0;
-      if (line_index == 0){
-        scrollbtn_up.image_index = 1;
-      }
-      event_user(0);
-    }
-    io_clear2();
-  }
-  
-  //move down
-  if(arrow_down){
-    if (xpos == width-1 || ypos &lt; height-1){
-     if (ypos &lt; height-1){
-        ypos = (ypos+1)mod height;
-        for(i=ypos;btn_array[xpos,i].empty;i=(i+1)mod height){}//scroll down the column to find the next non-empty space
+        for(i=ypos;btn_array[xpos,i].empty;i+=0){
+          if (i &gt; 0){
+            i -= 1;
+          }else{
+            i = height-1;
+          }
+        }//scroll up the column to find the next non-empty space
         ypos = i; 
+      }else if(line_index &gt; 0){//xpos &lt; width-1 &amp;&amp; ypos &lt;= 0
+        //scroll up the page
+        line_index -= 1;
+        scrollbtn_down.image_index = 0;
+        if (line_index == 0){
+          scrollbtn_up.image_index = 1;
+        }
+        event_user(0);
       }
-    }else if(line_index &lt; ds_map_size(session_list)-5){//xpos &lt; width-1 &amp;&amp; ypos &lt;= 0
-      //scroll down the page
-      line_index += 1;
-      scrollbtn_up.image_index = 0;
-      if (line_index == ds_map_size(session_list)-5){
-        scrollbtn_down.image_index = 1;
-      }
-      event_user(0);
+      io_clear2();
     }
-    io_clear2();
+    
+    //move down
+    if(arrow_down){
+      if (xpos == width-1 || ypos &lt; height-1){
+       if (ypos &lt; height-1){
+          ypos = (ypos+1)mod height;
+          for(i=ypos;btn_array[xpos,i].empty;i=(i+1)mod height){}//scroll down the column to find the next non-empty space
+          ypos = i; 
+        }
+      }else if(line_index &lt; ds_map_size(session_list)-5){//xpos &lt; width-1 &amp;&amp; ypos &lt;= 0
+        //scroll down the page
+        line_index += 1;
+        scrollbtn_up.image_index = 0;
+        if (line_index == ds_map_size(session_list)-5){
+          scrollbtn_down.image_index = 1;
+        }
+        event_user(0);
+      }
+      io_clear2();
+    }
+    
+    hovered = btn_array[xpos,ypos];
+    hover_border.sprite_index = hovered.border_sprite;
+    hover_border.x = hovered.x;
+    hover_border.y = hovered.y;
   }
-  
-  hovered = btn_array[xpos,ypos];
-  hover_border.sprite_index = hovered.border_sprite;
-  hover_border.x = hovered.x;
-  hover_border.y = hovered.y;
 }
 </string>
           </argument>
