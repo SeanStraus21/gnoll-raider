@@ -1,8 +1,6 @@
-SCRUM LOG - Sprint 04
-
-start date: 09/11/2015
-
-end date: 10/24/2015
+Sprint Log 04 <br>
+start date: 09/11/2015 <br>
+end date: 10/24/2015 <br>
 
 Day 1 Scrum Meeting:
 Date: 09/11/2015
