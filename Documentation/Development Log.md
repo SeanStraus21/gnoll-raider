@@ -195,15 +195,34 @@ start date: 10/25/2015
 end date: 11/07/2015
 
 Sprint 05 Goals:
-	1. Revise User Interface
-		Upgrade HUD, including separate HUD schemes for keyboard and xbox controller
-		Revise Keyboard Hotkey layout (do not insist on 1-to-1 correspondence with xbox)
-		Upgrade menus and stuff to be more convenient.
-	2. Enemy AI
-		line of sight checking
-		more complex movement (avoid clumping up, getting hit, etc.)
-		different tactics for different enemies
-		hitboxes and stuff
-	3. make abilities at least non-broken.
-	4. If you make it this far, go improve the level design
-		
+ - 1. Revise User Interface
+	 - Upgrade HUD, including separate HUD schemes for keyboard and xbox controller
+	 - Revise Keyboard Hotkey layout (do not insist on 1-to-1 correspondence with xbox)
+	 - Upgrade menus and stuff to be more convenient.
+ - 2. Enemy AI
+	 - line of sight checking
+	 - more complex movement (avoid clumping up, getting hit, etc.)
+	 - different tactics for different enemies
+	 - hitboxes and stuff
+ - 3. make abilities at least non-broken.
+ - 4. If you make it this far, go improve the level design
+
+	Conclusion: Ok, I admit it, this sprint basically didn't happen. I sort of... looked at it... a couple times... but no, nothing was accomplished. This is what happens if you put things off and then your grandmother dies and you have to go on a long road trip to set up a funeral all week. So, in the future, try not to let any more relatives die, and don't take time off, since you never know when something unexpected is going to happen and absorb a weekend.
+	
+### Sprint 06:
+Start Date: 11/08/2015
+End Date: 11/21/2015
+
+##### Sprint 06 Goals
+ - 1. Fix Pathing
+ - 2. Revise User Interface
+	 - Upgrade HUD, including separate HUD schemes for keyboard and xbox controller
+	 - Revise Keyboard Hotkey layout (do not insist on 1-to-1 correspondence with xbox)
+	 - Upgrade menus and stuff to be more convenient.
+ - 3. Enemy AI
+	 - line of sight checking
+	 - more complex movement (avoid clumping up, getting hit, etc.)
+	 - different tactics for different enemies
+	 - hitboxes and stuff
+ - 4. make abilities at least non-broken.
+ - 5. If you make it this far, go improve the level design

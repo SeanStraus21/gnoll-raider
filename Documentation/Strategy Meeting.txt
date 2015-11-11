@@ -80,7 +80,9 @@ Ideas For Keyboard Control Scheme
 	9. The last four abilities are trickier. toggle abilities, stealth, and sprint may be used often and in combat, but besides space there aren't any good buttons.
 	10. one option is alt, which could be used for toggling. Another would be to reserve space+R as the toggle button, with three sets of abilities. This Seems like a pretty confusing thing, and might not be worth it. Another option is to use C,V,B instead of space. this requires some thumb-wiggling, but might be the best solution. this eliminates toggle altogether. the last option would be to reserve space for toggling, but instead of toggling QWER(which has commands that need to be instantly accessible), we let ASDF control ability use. A final alternative is to use Q & R as toggleable ability sets, which would be scrolled through with Space.
 	11. A final option is to use QWER+ASDF, and allow spacebar to switch from main stuff to abilities. 
-		we assume ASDF contains less frequently used buttons like sprint and stealth, or the 
+		we assume ASDF contains less frequently used buttons like sprint and stealth, or the second bar of abilities which the player can set to what he likes. this way we have two modes: main and abilities. this is toggleable with space.
+Well, we've seen the options, and it looks like none of them are perfect. the best ones in my opinion are the CVB toggle and the QWER+ASDF
+One thing we could do to trim this down is to let sprint and stealth to be placed on the ability hotbars. normally they would be set to F and G, but they would appear in the 
 	
 	
 Option 5:
