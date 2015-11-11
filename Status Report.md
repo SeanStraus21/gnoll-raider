@@ -19,6 +19,12 @@ Truth be told, I had actually spent the last couple of weeks trying to write a p
 
 Unfortunately, this broke all the menus, all the message boxes, all the multiplayer (which relied on a dll. gamemaker:studio does not support dlls), and anything involving saving stuff to text files.
 
+November 07, 2015
+So, after I fixed all that, I remembered that I still hadn't started on the two term projects that are going to be due in about four weeks, and then had to attend a funeral the next week anyway, thereby forfeiting most of my available time to work on gnoll raider. 
+I wish I could go on for a few paragraphs about all the cool new features I implemented in the last two weeks, but actually I only worked on the game for 2 out of the 14 days available.
+And here I thought I couldn't do worse than the last sprint, but that would imply that I actually worked at all...
+However, now that midterms and funerals and halloween are over, productivity should rise back to normal. right?
+
 I spent most of the last four weeks of development time fixing these problems.
 
 However, there is some good news
