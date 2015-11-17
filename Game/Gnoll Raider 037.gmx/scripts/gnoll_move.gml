@@ -47,9 +47,33 @@ if (!pivoting && !snared && !channeling && !stunned && controlling_player == crn
     x += xspd;
     y += yspd;
   }else{
-    xspd = 0;
-    yspd = 0;
-    move_contact_solid(dir_move,crnt_spd);
+    //move as far as possible in the desired direction
+    //move_contact_solid(dir_move,crnt_spd);
+    if (!place_free(x+xspd,y)){
+      move_contact_solid(270+sign(xspd)*90,xspd);
+      xspd = 0;
+    }else{
+      x += xspd;
+    }
+    if (!place_free(x,y+yspd)){
+      move_contact_solid(180+sign(yspd)*90,yspd);
+      yspd = 0;
+    }else{
+      y += yspd;
+    }
   }
 }
+/*
+grabbing walls problem:
+  the original system was designed for orthogonal movement, but problems arise when colliding with diagonal objs
+  Our first improvement is to use separate checks for yspd and xspd.
+  Well, nothings easy. This means that pixels are catching and additional checks are needed
+    We have to be careful here. the underlying logic is sound: 
+      if destination can be reached, move there, else get as close as possible
+    But our definition of close as possible relies on the results of move_contact solid
+    There is one issue with our existing solution, which is that a very fast gnoll could teleport across obstacles.
+    This hasn't been a problem yet, but it might be if we redefine "close as possible"
+  our final resort is to replaced the move_contact_solid with a custom function.
+  In a pinch, we could also just stop pretending there is an arbitrary number of directions, we know there are only 8
+*/
 
