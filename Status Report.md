@@ -5,6 +5,11 @@
 I know it sounds crazy to use a development methodology for a team of one programmer/writer/graphicsman, but sometimes people do crazy things, and since I'm already making a video game about man-eating hyena creatures, I don't really mave much to lose. Anyway, I'm using a methodology referred to among software developers as agile/scrum (I did not invent these terms, I learned them in my software development class. just throwing that out there), which is basically jargon for developing software in short periods called sprints (Its kind of a metaphor), which usually last about two weeks. Each sprint begins with a meeting in which the team decides on a set of objectives for that sprint and decides who will do what. at the end of each sprint, the team reviews their work and adjusts their planning strategy as needed based on data gathered from the last sprint. in addition to planning and retrospection meetings, every day of a sprint the team members have a "daily scrum" in which each member updates his teammates on his progress since the last daily scrum, the idea being that if you spend a day playing video games instead of working, your team mates get mad at you and make you feel guilty for slacking off. So even though I don't have any team-mates, I try to keep track of what I do every day and do my best to be my own grouchy boss and make myself feel guilty if I slack off. 
 
 ##Now about that progress...
+Status Report 5: (11/24/2015)
+	If anyone was to wonder why there have been no new updates in the last couple of weeks, I would tell them that its because I can't work on the game until christmas break. Working on gnoll raider is fun and I don't like leaving a project to hang, but sometimes life is evil. It is especially likely to be so if you are a pathological procrastinator, and you have two term projects that were supposed to have been 50% done half a semester ago. The last sprint and this one are skipped, and the next one will be partially commandeered for studying for finals. after that though...
+	I did fix that bug though, the one that would cause your guy to stick to diagonal surfaces.
+
+Status Report 4: (??/??/2015)
 or
 Why the developer took twice as long to do half as much.
 Well, things haven't been going that smoothly, which you might have guessed from the fact that there hasn't been an updated build in four weeks.

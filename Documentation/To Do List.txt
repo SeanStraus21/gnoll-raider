@@ -1,8 +1,4 @@
 TO DO List
-Internet Programming HW due Wednesday
-Computer Architecture Lab due Thursday
-
-Halloween Costume
 
 Stage Builder
 	Tileset Selector + Tileset Specific Stuff
