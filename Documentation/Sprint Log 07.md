@@ -19,12 +19,29 @@ Date: 12/15/2015
 
 Day 4 Scrum Meeting:
 Date: 12/16/2015
- - 
+ - More Documents
+ - More Concept Art
+ - Created test game to experiment with ramps and other kinds of 3d movement
+ - started designing an isometric ground height determination algorithm
+ 
+Day 5 Scrum Meeting:
+Date: 12/17/2015
+ - developed a formula for deforming orthographic coordinate planes to an arbitrary isometric grid
+ - Invented Isometric Stair System
+ - Began Designing Isometric Dynamic Ramp Algorithm
+
+Day 5 Scrum Meeting:
+Date: 12/18/2015
+	Finished Isometric Dynamic Ramp Algorithm
+	Began Working on advanced
+	Worked on level editor to include ramps and terrain of arbitrary height.
+	Began Designing better levels
+	worked on art for loading screen
 
 By the next daily scrum I will:
-	1. Add the improved HUD
-	2. Fix Terrible UI
-	3. Fix Terrible AI
-	4. Clean up your act and fix broken dialog and shop menus, even if they aren't perfect. at least don't crash the game over it
-	5. Add the skills and abilities panel in the start menu
-	6. Apply the skills on load 
+	1. finish improvements on level editor
+	2. add better levels
+	3. finish loading screen
+	4. Fix Terrible AI
+	5. Clean up your act and fix broken dialog and shop menus, even if they aren't perfect. at least don't crash the game over it
+	6. Add the skills and abilities panel in the start menu
