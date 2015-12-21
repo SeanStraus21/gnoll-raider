@@ -37,7 +37,18 @@ Date: 12/18/2015
 	Worked on level editor to include ramps and terrain of arbitrary height.
 	Began Designing better levels
 	worked on art for loading screen
+	
+Day 6 Scrum Meeting:
+Date: 12/19/2015
+	Worked on Loading Screen
+	Worked on Algorithm for loading rooms sequentially
+	Worked on sprites for enemies
 
+Day 7 Scrum Meeting:
+Date: 12/20/2015
+	Added Jumping and aerial pathing into improved Movement system
+	Worked on sprites for enemies
+	
 By the next daily scrum I will:
 	1. finish improvements on level editor
 	2. add better levels
