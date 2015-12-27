@@ -26,21 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>///set variables
-active = true;
-globalvar server;
-server = -1;
-global.returning = false;
+active_submenu = id;
 
-session_list = ds_map_create();
+btn_labels[0] = "Select Arena";
+btn_labels[1] = "Select Character";
+btn_labels[2] = "Select Opponent";
+btn_labels[3] = "Begin the Battle!";
+btn_labels[4] = "Run Awaaay!";
 
-btn_labels[0] = "Create Warband";
-btn_labels[1] = "Load Warband";
-btn_labels[2] = "Join Warband";
-btn_labels[3] = "Arena Battle";
-btn_labels[4] = "Cancel";
 
-//set alarm to scan pings
-alarm[0] = 1;
 </string>
           </argument>
         </arguments>
@@ -64,43 +58,17 @@ alarm[0] = 1;
             <string>///Create Submenus
 active_submenu = id;
 //create main submenu
-main = create_submenu(128,160,1,5,spr_btn_96x32,spr_selection_96x32,96,32,0,0,false);
+main = create_submenu(128,160,5,1,spr_btn_96x32,spr_selection_96x32,96,32,0,0,false);
 for(i = 0; i &lt; main.s; i+=1){
   main.btn[0,i].text = btn_labels[i];
 }
-//create join submenu
-join_submenu = create_submenu(96,192,1,5,spr_gameslot,spr_selection_96x32,96,64,0,0,true);
-
+//create level_select submenu
+level_submenu = create_submenu(96,192,1,5,spr_gameslot,spr_selection_96x32,96,64,0,0,true);
+//create opponent_select submenu
+opponent_submenu = create_submenu(96,192,1,5,spr_gameslot,spr_selection_96x32,96,64,0,0,true);
 //set active submenu
 main.active = true;
 active_submenu = main;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///create listening port
-
-temp_socket = network_create_server(network_socket_udp,PORT_SLAVE,12);
-if (temp_socket &lt; 0){
-  show_message_menu("Failed to listen on port");
-  waiting_for = 0;
-}
 </string>
           </argument>
         </arguments>
@@ -130,41 +98,6 @@ if(active){
     io_clear2();
   }  //check arrowkeys
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="68">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Listen for Pings
-var packet, crnt_ip, crnt_name, disconnected;
-
-//read packet
-packet = readbyte();
-crnt_name = readstring();
-disconnected = readbool();
-crnt_ip = ds_map_find_value(async_load,"ip");
-
-//update the slots
-event_user(0);
-alarm[0] = 30;
-
 </string>
           </argument>
         </arguments>
@@ -269,58 +202,26 @@ if(hovered.empty){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///create, load, join, enter arena, or quit
-//this needs to connect the player to his selected host
+            <string>///start, quit, choose opponent, choose level, choose character
+
 switch(hovered.btn_index){
-case 0: //Create Warband
+case 0: //Select Character
+  room_goto(room_charactermain);
+  break;
+case 1: //Select Arena
+  active_submenu = level_submenu;
+  break;
+case 2: //Select Opponent
+  active_submenu = opponent_submenu;
+  break;
+case 3: //Fight
   sound_play(snd_click);
-  global.multiplayer = true;
-  global.master = true;
-  crnt_pnum = 0;
-  network_destroy(temp_socket);
-  ds_map_destroy(session_list);
-  room_goto(room_lobby);
+  room_goto(room_arena);
   break;
-case 1: //Load Warband
+case 4: //Flee
   sound_play(snd_click);
-  network_destroy(temp_socket);
-  ds_map_destroy(session_list);
+  room_goto(room_multiplayermenu);
   break;
-case 2://Join Warband
-  sound_play(snd_click);
-  if(selected != noone &amp;&amp; !selected.empty){
-    global.master = false;
-    server = network_create_socket(network_socket_tcp);//create a socket
-    network_connect(server,selected.ip,PORT_MASTER);//try to connect to server
-    if (server &lt; 0){
-      show_message_menu("Unable to connect to server");
-      exit;
-    }else{
-      global.multiplayer = true;
-      network_destroy(temp_socket);
-      ds_map_destroy(session_list);
-      room_goto(room_lobby);
-    }
-  }else{
-    show_message_menu("You must select a game to join");
-  }
-  break;
-case 3: //Enter Arena
-  break;
-case 4: //Cancel
-  sound_play(snd_click);
-  global.multiplayer = false;
-  network_destroy(temp_socket);
-  ds_map_destroy(session_list);
-  room_goto(room_mainmenu);
-  break;
-default: //Select a game
-  if(!hovered.empty){
-    selected = hovered;
-    selection_border.x = selected.x;
-    selection_border.y = selected.y;
-    selection_border.sprite_index = selected.border_sprite;
-  }
 }
 </string>
           </argument>

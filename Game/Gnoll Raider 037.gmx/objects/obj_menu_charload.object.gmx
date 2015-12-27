@@ -225,7 +225,7 @@ if(arrow_right){
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="12">
+    <event eventtype="7" enumb="25">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -273,7 +273,8 @@ case 1:
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (column == 0){
+            <string>///press enter
+if (column == 0){
   if (hovered.num = pageind + hovered.slot_index &amp;&amp; hovered.num &lt; header_count){
     selection = hovered.num;
   }

@@ -424,6 +424,7 @@
       <script>scripts\character_spawn.gml</script>
       <script>scripts\show_question_menu.gml</script>
       <script>scripts\show_message_menu.gml</script>
+      <script>scripts\create_submenu.gml</script>
     </scripts>
     <scripts name="Multiplayer Functions">
       <script>scripts\npc_create.gml</script>
@@ -687,6 +688,7 @@
       <object>objects\obj_selection</object>
       <object>objects\obj_menupanel_parent</object>
       <object>objects\obj_btn</object>
+      <object>objects\obj_submenu</object>
       <objects name="Main Menus">
         <object>objects\obj_selector1</object>
         <object>objects\obj_selector_options</object>
@@ -711,6 +713,7 @@
         <object>objects\obj_mlobbycontrol</object>
         <object>objects\obj_slobbycontrol</object>
         <object>objects\obj_multiplayer_menu</object>
+        <object>objects\obj_menu_arena</object>
         <object>objects\obj_menu_lobby</object>
       </objects>
       <objects name="Start Menus">
@@ -764,6 +767,7 @@
     <objects name="Dungeons">
       <object>objects\obj_dungeon_cave</object>
       <object>objects\obj_dungeon_dismalwaste</object>
+      <object>objects\obj_dungeon_arena</object>
       <object>objects\obj_dungeon_yahazeer</object>
       <object>objects\obj_dungeon_boneyard</object>
       <object>objects\obj_dungeon_parent</object>
@@ -825,6 +829,7 @@
       <room>rooms\room_charactermain</room>
       <room>rooms\room_charactercreate</room>
       <room>rooms\room_characterload</room>
+      <room>rooms\room_arenamenu</room>
     </rooms>
     <rooms name="Lair Rooms">
       <room>rooms\room_lair00</room>
@@ -836,6 +841,7 @@
     </rooms>
     <room>rooms\room_gameover</room>
     <room>rooms\room_dungeonroom</room>
+    <room>rooms\room_arena</room>
     <room>rooms\room_overland</room>
     <room>rooms\room_test</room>
   </rooms>

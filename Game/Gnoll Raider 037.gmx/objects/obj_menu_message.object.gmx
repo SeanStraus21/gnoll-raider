@@ -80,7 +80,7 @@ if(confirm_btn || cancel_btn){
             <string>///Press Button
 root.active = true;
 with(root){
-  event_user(2);
+  event_user(15);
 }
 instance_destroy();
 </string>

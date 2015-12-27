@@ -403,6 +403,9 @@ case 2://Next
         room_goto(room_lobby);
       }
       break;
+      case (room_arenamenu):
+        room_goto(room_arenamenu);
+        break;
     }
   }
   break;

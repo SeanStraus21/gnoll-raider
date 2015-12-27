@@ -88,7 +88,7 @@ if(cancel_btn){
 root.answer = answer;
 root.active = true;
 with(root){
-  event_user(2);
+  event_user(15);
 }
 instance_destroy();
 </string>
