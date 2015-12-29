@@ -30,29 +30,45 @@ Date: 12/17/2015
  - Invented Isometric Stair System
  - Began Designing Isometric Dynamic Ramp Algorithm
 
-Day 5 Scrum Meeting:
-Date: 12/18/2015
-	Finished Isometric Dynamic Ramp Algorithm
-	Began Working on advanced
-	Worked on level editor to include ramps and terrain of arbitrary height.
-	Began Designing better levels
-	worked on art for loading screen
-	
 Day 6 Scrum Meeting:
-Date: 12/19/2015
-	Worked on Loading Screen
-	Worked on Algorithm for loading rooms sequentially
-	Worked on sprites for enemies
-
+Date: 12/18/2015
+ - Finished Isometric Dynamic Ramp Algorithm
+ - Began Working on advanced
+ - Worked on level editor to include ramps and terrain of arbitrary height.
+ - Began Designing better levels
+ - worked on art for loading screen
+ - 
 Day 7 Scrum Meeting:
+Date: 12/19/2015
+ - Worked on Loading Screen
+ - Worked on Algorithm for loading rooms sequentially
+ - Worked on sprites for enemies
+
+Day 8 Scrum Meeting:
 Date: 12/20/2015
-	Added Jumping and aerial pathing into improved Movement system
-	Worked on sprites for enemies
-	
-By the next daily scrum I will:
-	1. finish improvements on level editor
-	2. add better levels
-	3. finish loading screen
-	4. Fix Terrible AI
-	5. Clean up your act and fix broken dialog and shop menus, even if they aren't perfect. at least don't crash the game over it
-	6. Add the skills and abilities panel in the start menu
+ - Added Jumping and aerial pathing into improved Movement system
+ - Worked on sprites for enemies
+
+Day 9 Scrum Meeting:
+Date: 12/21/2015
+ - worked on system for abstracting menu creation
+
+Day 10 Scrum Meeting:
+Date: 12/22/2015
+ - continued working on system for abstracting menu creation
+
+Day 11 Scrum Meeting:
+Date: 12/23/2015
+ - worked on arena menu
+
+Day 12 Scrum Meeting:
+Date: 12/24/2015
+ - nothing (christmas eve)
+
+Day 13 Scrum Meeting:
+Date: 12/25/2015
+ - nothing (christmas)
+
+Day 14 Scrum Meeting:
+Date: 12/26/2015
+ - nothing (reclusing)

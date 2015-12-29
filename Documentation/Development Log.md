@@ -226,3 +226,59 @@ End Date: 11/21/2015
 	 - hitboxes and stuff
  - 4. make abilities at least non-broken.
  - 5. If you make it this far, go improve the level design
+	Conclusion: Yet another weak sprint. either I've overestimated my abilities or I've underestimated the challenge. We revised some of the menus and did some artwork. The only really important thing we did was fix the movement glitch left over from the sprint before. 
+
+### Sprint 07:
+Start Date: 12/13/2015
+End Date: 12/26/2015
+
+##### Sprint 07 Goals
+ - 1. Fix Hitboxes
+ - 2. Revise User Interface
+	 - Upgrade HUD, including separate HUD schemes for keyboard and xbox controller
+	 - Revise Keyboard Hotkey layout (do not insist on 1-to-1 correspondence with xbox)
+	 - Upgrade menus and stuff to be more convenient.
+ - 3. Enemy AI
+	 - line of sight checking
+	 - more complex movement (avoid clumping up, getting hit, etc.)
+	 - different tactics for different enemies
+	 - hitboxes and stuff
+ - 4. Improve Collision system to use height of terrain
+		new pathing system
+		new collision system
+		ramps
+		upgrade jumping
+ - 5. Create a testing mode where we can debug AI and new terrain.
+ - 6. If you make it this far, go improve the level design
+	Conclusion: Finally a decent sprint. Of course, considering I had a complete holiday, I guess I shouldn't be so excited. We didn't quite get around to AI, which we knew would be a big thing. We have completed the improved Collision system, as well as a new arena mode in which to test new developments. In addition to these, we did many other things which are less directly impactful. most importantly, we found a way to abstract out some of the repetition involved in making and editing menus. We also did a lot of graphics stuff, both conceptual and actual sprites. We also did a lot of planning and thinking, and that does count for something. Overall, the biggest disappointment is how little these things seem to visibly affect the game. I was hoping for something more amazing during christmas break. Oh well, I'll make it up next sprint.
+	
+### Sprint 08:
+Start Date: 12/27/2015
+End Date: 01/09/2016
+
+##### Sprint 08 Goals
+ - 1. Fix Hitboxes (should have done this a while ago, its not that big of a project)
+ - 2. Upgrade Level Editor
+		include a way to manipulate height
+		add ramps
+ - 3. Just do the user interface already
+	 - Upgrade HUD, including separate HUD schemes for keyboard and xbox controller
+	 - Revise Keyboard Hotkey layout (do not insist on 1-to-1 correspondence with xbox)
+	 - Upgrade menus and stuff to be more convenient.
+	 - Do SOMETHING about the keyboard controls. they're awful.
+ - 4. Combat Mechanics
+	 - Start by working on the basics: get a functional enemy awareness model
+	 - Try to streamline the character's abilities and movement. maybe its the graphics, but things seem kind of jerky and inaccurate.
+	 - Set up a general system for incorporating delays into different actions. every attack should have a casting time.
+	 - maybe just scrap the abilities for now, add them back in later when they start making sense.
+ - 5. Enemy AI
+	 - This is a big one, but this is your last chance to really crack down on it.
+	 - develop an awareness model for the enemy, that allows them to remember things.
+	 - implement basic collision, line-of-sight and pathfinding routines
+	 - besides the primary states, figure in reasonable intermediate states. find a way to make this general and non-glitchy.
+	 - fine tune combat behavior. streamline enemy attacks, including delays, tells, and other effects.
+	 - develop a system of group behaviors for local mobs
+	 - develop a system for dungeon-wide responses from inhabitants.
+ - 6. Probably this will take the whole two weeks, but you really need to crank out at least a few levels to include the new system
+	 - bigger and better chambers with modern collisions
+	 - loading screen system for large levels
