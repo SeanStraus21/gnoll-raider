@@ -8,13 +8,33 @@ Date: 12/27/2015
  - worked on graphics
 
 Day 2 Scrum Meeting:
-Date: 12/27/2015
+Date: 12/28/2015
  - completed arena mode
+ - solved a mysterious glitch in the save-load system
 
 Day 3 Scrum Meeting:
+Date: 12/29/2015
+ - spent the entire day upgrading the level editor
+ 
+Day 4 Scrum Meeting:
+Date: 12/30/2015
+ - merged movement test with main game
+ - rewrote level editor export system and chamber generation to work with segmented loading system
+ - worked more on loading screen
+
+Day 5 Scrum Meeting:
+Date: 12/31/2015
+ - struggled against level exporter
+ - achieved victory against the level exporter
+ - refined level exporter
+ - impediments: more holiday crap
+ 
+Day 6 Scrum Meeting:
+ - Updated Save-Load system for the level editor
+ - Began Work on 
 
 For the Next Daily Scrum I will:
- - 1. fix hitboxes
- - 2. upgrade the stage editor
- - 3. make a stage using the new system
- - 4. make a loading screem for it
+ - 1. implement loading screen and segmented loading system
+ - 2. update chamber generation system to be compatible with new system
+ - 3. fix hitboxes
+ - 4. begin working on enemy AI

@@ -1,0 +1,19 @@
+///Chamber load
+
+In Exit Script:
+
+In Dungeon Step Event:
+	if(loading){
+		switch (load_phase){
+		case 0://destroy objects
+		case 1://clear tiles
+			//clear room
+			if(lc == room_height+256){
+				for(i=0;i<320;i+=1){
+					
+				}
+			}
+		case 1:
+			//load room
+		}
+	}

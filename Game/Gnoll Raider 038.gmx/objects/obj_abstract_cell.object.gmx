@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>cell_x = 0;
 cell_y = 0;
-cell_type = obj_wall;
+cell_type = obj_ground;
 </string>
           </argument>
         </arguments>

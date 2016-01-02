@@ -115,7 +115,10 @@
       <sprite>sprites\spr_portal_horizontalx64</sprite>
       <sprite>sprites\spr_door_dismalwaste</sprite>
       <sprite>sprites\spr_door_badlands</sprite>
+      <sprite>sprites\spr_door_empty_badlands</sprite>
       <sprite>sprites\spr_pathing_door</sprite>
+      <sprite>sprites\spr_ramp_NE_badlands</sprite>
+      <sprite>sprites\spr_ramp_NW_badlands</sprite>
     </sprites>
     <sprites name="Pathing Blockers">
       <sprite>sprites\spr_pathing16x16</sprite>
@@ -380,6 +383,14 @@
     <background>background\tileset_lair</background>
     <background>background\tileset_isotest_top</background>
     <background>background\tileset_lair_top</background>
+    <backgrounds name="tilesets">
+      <background>background\tileset_badlands_cap</background>
+      <background>background\tileset_badlands_top</background>
+      <background>background\tileset_badlands_mid</background>
+      <background>background\tileset_badlands_cliffbase_left</background>
+      <background>background\tileset_badlands_cliffbase_right</background>
+      <background>background\tileset_badlands_ground</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -475,24 +486,46 @@
           <script>scripts\generate_chamber_lair_0.gml</script>
         </scripts>
       </scripts>
+      <scripts name="template_00">
+        <script>scripts\chamber_template_00_chunk_0000.gml</script>
+        <script>scripts\chamber_template_00_chunk_0001.gml</script>
+        <script>scripts\chamber_template_00_chunk_0002.gml</script>
+        <script>scripts\chamber_template_00_header.gml</script>
+        <script>scripts\chamber_template_00_tilechunk_0000.gml</script>
+        <script>scripts\chamber_template_00_tilechunk_0001.gml</script>
+        <script>scripts\chamber_template_00_tilechunk_0002.gml</script>
+        <script>scripts\chamber_template_00_tilechunk_0003.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="Collisions and Physics">
+      <script>scripts\point_pathable.gml</script>
+      <script>scripts\linear_path_pathable.gml</script>
+      <script>scripts\snap_to_pathable.gml</script>
+      <script>scripts\get_slope_z.gml</script>
+      <script>scripts\get_iso_45d.gml</script>
+      <script>scripts\get_iso_135d.gml</script>
+      <script>scripts\ground_z_shift.gml</script>
+      <script>scripts\aerial_point_pathable.gml</script>
+      <script>scripts\ramp_pathable.gml</script>
+      <script>scripts\move_contact_nonpathable.gml</script>
     </scripts>
     <scripts name="Networking">
-      <script>scripts\clearbuffer.gml</script>
-      <script>scripts\sendmessage.gml</script>
       <scripts name="read">
-        <script>scripts\readstring.gml</script>
-        <script>scripts\readbyte.gml</script>
-        <script>scripts\readint.gml</script>
         <script>scripts\readshort.gml</script>
+        <script>scripts\readbyte.gml</script>
         <script>scripts\readbool.gml</script>
+        <script>scripts\readint.gml</script>
+        <script>scripts\readstring.gml</script>
       </scripts>
       <scripts name="write">
         <script>scripts\writestring.gml</script>
-        <script>scripts\writebyte.gml</script>
-        <script>scripts\writeshort.gml</script>
-        <script>scripts\writeint.gml</script>
         <script>scripts\writebool.gml</script>
+        <script>scripts\writebyte.gml</script>
+        <script>scripts\writeint.gml</script>
+        <script>scripts\writeshort.gml</script>
       </scripts>
+      <script>scripts\clearbuffer.gml</script>
+      <script>scripts\sendmessage.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -782,13 +815,16 @@
       <object>objects\obj_abstract_npc</object>
       <object>objects\obj_abstract_cell</object>
       <object>objects\obj_abstract_door</object>
-      <object>objects\obj_empty_space</object>
       <object>objects\obj_cell_parent</object>
       <object>objects\obj_door</object>
       <object>objects\obj_stairs_boss</object>
       <object>objects\obj_pathing_blocker</object>
-      <object>objects\obj_wall</object>
-      <object>objects\obj_isoblock_n</object>
+      <object>objects\obj_terrain_parent</object>
+      <object>objects\obj_ground</object>
+      <object>objects\obj_ramp_parent</object>
+      <object>objects\obj_ramp_NE</object>
+      <object>objects\obj_ramp_NW</object>
+      <object>objects\obj_door_empty</object>
       <objects name="NPC Spawn Locations">
         <object>objects\obj_npcspawn_parent</object>
         <object>objects\obj_enemyspawn_g_l_ex</object>
@@ -845,7 +881,7 @@
     <room>rooms\room_overland</room>
     <room>rooms\room_test</room>
   </rooms>
-  <constants number="34">
+  <constants number="36">
     <constant name="LAN_IP">"192.168.1.255"</constant>
     <constant name="IP_ADDRESS">"192.168.1.89"</constant>
     <constant name="PORT_MASTER">14800</constant>
@@ -880,6 +916,8 @@
     <constant name="MU_SAVE">35</constant>
     <constant name="NEXT_CHAMBER">36</constant>
     <constant name="SEED">37</constant>
+    <constant name="cell_w">64</constant>
+    <constant name="cell_h">32</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

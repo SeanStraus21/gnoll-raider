@@ -39,6 +39,61 @@ if (!strafing && !stunned){
   dir_face = dir_move;
 }
 
+
+//xspd = lengthdir_x(crnt_spd,dir_move);
+//yspd = lengthdir_y(crnt_spd,dir_move);
+//if conditions permit, move desired amount
+if (!pivoting && !snared && !channeling && !stunned && controlling_player == crnt_pnum && !instance_exists(obj_menu_parent)){
+  if (point_pathable(x+xspd,y+yspd,max_diff) || aerial_point_pathable(x+xspd,y+yspd)){
+    x += xspd;
+    y += yspd;
+  }else{
+    //move as far as possible in the desired direction
+    move_contact_nonpathable(dir_move,crnt_spd,max_diff);
+    //move_contact_all(dir_move,crnt_spd);
+    if (!point_pathable(x+xspd,y,max_diff) && !aerial_point_pathable(x+xspd,y)){
+      move_contact_nonpathable(270+sign(xspd)*90,xspd,max_diff);
+      //move_contact_all(270+sign(xspd)*90,xspd);
+      xspd = 0;
+    }else{
+      x += xspd;
+    }
+    if (!point_pathable(x,y+yspd,max_diff)&& !aerial_point_pathable(x,y+yspd)){
+      move_contact_nonpathable(180+sign(yspd)*90,yspd,max_diff);
+      //move_contact_all(270+sign(xspd)*90,xspd);
+      yspd = 0;
+    }else{
+      y += yspd;
+    }
+  }
+}
+
+a = round((y+cell_h/2)/cell_h - (x+cell_w/2)/cell_w);
+b = round((y+cell_h/2)/cell_h + (x+cell_w/2)/cell_w);
+ground = instance_position((b - a)/2*cell_w,(b + a)/2*cell_h,obj_terrain_parent);
+if(!ground){exit;}
+if (ground.sloped){
+  base_z = get_slope_z(x,y,ground);
+}else{
+  base_z = ground.z;
+}
+if (!jumping){
+  z = base_z;
+}else{
+  z += z_spd;
+  if (base_z > z){
+    jumping = false;
+    z = base_z;
+    zspd = 0;
+    if (!point_pathable(x,y,max_diff)){
+      snap_to_pathable(max_diff);
+    }
+  }else{
+    z_spd -= 1;
+  }
+}
+/* 
+//********** OLD SYSTEM ******************************************
 //xspd = lengthdir_x(crnt_spd,dir_move);
 //yspd = lengthdir_y(crnt_spd,dir_move);
 //if conditions permit, move desired amount
@@ -63,17 +118,4 @@ if (!pivoting && !snared && !channeling && !stunned && controlling_player == crn
     }
   }
 }
-/*
-grabbing walls problem:
-  the original system was designed for orthogonal movement, but problems arise when colliding with diagonal objs
-  Our first improvement is to use separate checks for yspd and xspd.
-  Well, nothings easy. This means that pixels are catching and additional checks are needed
-    We have to be careful here. the underlying logic is sound: 
-      if destination can be reached, move there, else get as close as possible
-    But our definition of close as possible relies on the results of move_contact solid
-    There is one issue with our existing solution, which is that a very fast gnoll could teleport across obstacles.
-    This hasn't been a problem yet, but it might be if we redefine "close as possible"
-  our final resort is to replaced the move_contact_solid with a custom function.
-  In a pinch, we could also just stop pretending there is an arbitrary number of directions, we know there are only 8
-*/
 
