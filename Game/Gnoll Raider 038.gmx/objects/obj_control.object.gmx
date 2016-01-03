@@ -381,15 +381,18 @@ draw_set_font(font0);
 draw_set_color(c_white);
 if global.master == true
     {
-    if instance_exists(obj_menu_dialogue)
-        {
-        draw_text(view_xview[0],view_yview[0]+48,string(ds_list_find_value(pchar[0].target_npc.dlg_log,0)))
-        }
+  draw_text(view_xview[0],view_yview[0]+48,string(instance_number(obj_ramp_NE)))
+  if (instance_number(obj_ramp_NE)&gt;0){
+  draw_text(view_xview[0],view_yview[0]+96,string(instance_find(obj_ramp_NE,0).x))
+  draw_text(view_xview[0],view_yview[0]+96,string(instance_find(obj_ramp_NE,0).y))
+  }
     //draw_text(view_xview[0],view_yview[0]+64,string(pchar[1].object_index))
     //draw_text(view_xview[0],view_yview[0]+80,string(collision_rectangle(pchar[0].x,pchar[0].y,pchar[0].x+16,pchar[0].y+32,obj_escape_00,true,false)))
     //draw_text(view_xview[0],view_yview[0]+96,string(collision_rectangle(pchar[1].x,pchar[1].y,pchar[1].x+16,pchar[1].y+32,obj_escape_00,true,false)))
     //draw_text(view_xview[0],view_yview[0]+48,string(allclear))
     }
+    
+
 /*
 if instance_exists(obj_candummy)
     {

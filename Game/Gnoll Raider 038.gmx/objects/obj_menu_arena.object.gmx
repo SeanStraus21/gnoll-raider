@@ -41,15 +41,19 @@ btn_labels[4] = "Run Awaaay!";
 
 arena_chambers = ds_list_create();
 ds_list_add(arena_chambers,chamber_template_00_header);
-ds_list_add(arena_chambers,generate_chamber_02);
-ds_list_add(arena_chambers,generate_chamber_03);
-ds_list_add(arena_chambers,generate_chamber_04);
-ds_list_add(arena_chambers,generate_chamber_05);
-chamber_name[0] = "Experiment X";
-chamber_name[1] = "Chamber 2";
-chamber_name[2] = "Chamber 3";
-chamber_name[3] = "Chamber 4";
-chamber_name[4] = "Chamber 5";
+ds_list_add(arena_chambers,chamber_template_01_header);
+ds_list_add(arena_chambers,chamber_template_02_header);
+ds_list_add(arena_chambers,chamber_template_03_header);
+ds_list_add(arena_chambers,chamber_template_04_header);
+ds_list_add(arena_chambers,chamber_template_05_header);
+chamber_name[0] = "Chamber 0";
+chamber_name[1] = "Chamber 1";
+chamber_name[2] = "Chamber 2";
+chamber_name[3] = "Chamber 3";
+chamber_name[4] = "Chamber 4";
+chamber_name[5] = "Chamber 5";
+chamber_name[6] = "Stair Chamber";
+chamber_name[7] = "Colosseum";
 
 arena_enemies = ds_list_create();
 ds_list_add(arena_enemies,obj_enemy_evileye);
@@ -87,7 +91,7 @@ for(i = 0; i &lt; main.w; i+=1){
 level_submenu = create_submenu(96,192,1,5,spr_gameslot,spr_selection_96x32,96,64,0,0,true);
 
 //create opponent_select submenu
-opponent_submenu = create_submenu(224,192,1,5,spr_gameslot,spr_selection_96x32,96,64,0,0,true);
+opponent_submenu = create_submenu(256,192,1,5,spr_gameslot,spr_selection_96x32,96,64,0,0,true);
 
 if instance_exists(obj_storage){
   storage = instance_find(obj_storage,0);

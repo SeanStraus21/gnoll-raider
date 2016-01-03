@@ -120,18 +120,6 @@
       <sprite>sprites\spr_ramp_NE_badlands</sprite>
       <sprite>sprites\spr_ramp_NW_badlands</sprite>
     </sprites>
-    <sprites name="Pathing Blockers">
-      <sprite>sprites\spr_pathing16x16</sprite>
-      <sprite>sprites\spr_cliffbase_N</sprite>
-      <sprite>sprites\spr_cliffbase_N_x64</sprite>
-      <sprite>sprites\spr_cliffbase_S</sprite>
-      <sprite>sprites\spr_cliffbase_S_x64</sprite>
-      <sprite>sprites\sprcliffbase_W</sprite>
-      <sprite>sprites\spr_cliffbase_W_x64</sprite>
-      <sprite>sprites\spr_cliffbase_E</sprite>
-      <sprite>sprites\spr_cliffbase_E_x64</sprite>
-      <sprite>sprites\spr_pathingblocker_mega</sprite>
-    </sprites>
     <sprites name="Doodads">
       <sprite>sprites\spr_bosschamber_rocks</sprite>
       <sprite>sprites\spr_doodad_story_bossrock</sprite>
@@ -352,6 +340,7 @@
       <sprite>sprites\spr_mask_isox</sprite>
       <sprite>sprites\spr_mask_2x2</sprite>
       <sprite>sprites\spr_hitbox_48x64</sprite>
+      <sprite>sprites\spr_pathingblocker_mega</sprite>
     </sprites>
     <sprite>sprites\spr_savestation</sprite>
     <sprite>sprites\spr_fadefilter_fog_grey</sprite>
@@ -475,26 +464,357 @@
       <script>scripts\has_los.gml</script>
     </scripts>
     <scripts name="Chamber Schematics">
-      <script>scripts\generate_chamber_01.gml</script>
-      <script>scripts\generate_chamber_02.gml</script>
-      <script>scripts\generate_chamber_03.gml</script>
-      <script>scripts\generate_chamber_04.gml</script>
-      <script>scripts\generate_chamber_05.gml</script>
       <scripts name="special">
         <script>scripts\generate_stairchamber_00.gml</script>
         <scripts name="lair schematics">
           <script>scripts\generate_chamber_lair_0.gml</script>
         </scripts>
       </scripts>
-      <scripts name="template_00">
-        <script>scripts\chamber_template_00_chunk_0000.gml</script>
-        <script>scripts\chamber_template_00_chunk_0001.gml</script>
-        <script>scripts\chamber_template_00_chunk_0002.gml</script>
-        <script>scripts\chamber_template_00_header.gml</script>
-        <script>scripts\chamber_template_00_tilechunk_0000.gml</script>
-        <script>scripts\chamber_template_00_tilechunk_0001.gml</script>
-        <script>scripts\chamber_template_00_tilechunk_0002.gml</script>
-        <script>scripts\chamber_template_00_tilechunk_0003.gml</script>
+      <scripts name="Templates">
+        <scripts name="template_00">
+          <script>scripts\chamber_template_00_chunk_0000.gml</script>
+          <script>scripts\chamber_template_00_chunk_0001.gml</script>
+          <script>scripts\chamber_template_00_chunk_0002.gml</script>
+          <script>scripts\chamber_template_00_chunk_0003.gml</script>
+          <script>scripts\chamber_template_00_chunk_0004.gml</script>
+          <script>scripts\chamber_template_00_chunk_0005.gml</script>
+          <script>scripts\chamber_template_00_chunk_0006.gml</script>
+          <script>scripts\chamber_template_00_chunk_0007.gml</script>
+          <script>scripts\chamber_template_00_chunk_0008.gml</script>
+          <script>scripts\chamber_template_00_chunk_0009.gml</script>
+          <script>scripts\chamber_template_00_chunk_0010.gml</script>
+          <script>scripts\chamber_template_00_chunk_0011.gml</script>
+          <script>scripts\chamber_template_00_chunk_0012.gml</script>
+          <script>scripts\chamber_template_00_chunk_0013.gml</script>
+          <script>scripts\chamber_template_00_chunk_0014.gml</script>
+          <script>scripts\chamber_template_00_header.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0000.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0001.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0002.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0003.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0004.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0005.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0006.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0007.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0008.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0009.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0010.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0011.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0012.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0013.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0014.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0015.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0016.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0017.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0018.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0019.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0020.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0021.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0022.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0023.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0024.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0025.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0026.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0027.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0028.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0029.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0030.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0031.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0032.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0033.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0034.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0035.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0036.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0037.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0038.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0039.gml</script>
+          <script>scripts\chamber_template_00_tilechunk_0040.gml</script>
+        </scripts>
+        <scripts name="template_01">
+          <script>scripts\chamber_template_01_chunk_0000.gml</script>
+          <script>scripts\chamber_template_01_chunk_0001.gml</script>
+          <script>scripts\chamber_template_01_chunk_0002.gml</script>
+          <script>scripts\chamber_template_01_chunk_0003.gml</script>
+          <script>scripts\chamber_template_01_chunk_0004.gml</script>
+          <script>scripts\chamber_template_01_chunk_0005.gml</script>
+          <script>scripts\chamber_template_01_chunk_0006.gml</script>
+          <script>scripts\chamber_template_01_chunk_0007.gml</script>
+          <script>scripts\chamber_template_01_chunk_0008.gml</script>
+          <script>scripts\chamber_template_01_chunk_0009.gml</script>
+          <script>scripts\chamber_template_01_chunk_0010.gml</script>
+          <script>scripts\chamber_template_01_chunk_0011.gml</script>
+          <script>scripts\chamber_template_01_chunk_0012.gml</script>
+          <script>scripts\chamber_template_01_chunk_0013.gml</script>
+          <script>scripts\chamber_template_01_chunk_0014.gml</script>
+          <script>scripts\chamber_template_01_header.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0000.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0001.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0002.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0003.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0004.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0005.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0006.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0007.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0008.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0009.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0010.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0011.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0012.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0013.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0014.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0015.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0016.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0017.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0018.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0019.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0020.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0021.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0022.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0023.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0024.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0025.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0026.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0027.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0028.gml</script>
+          <script>scripts\chamber_template_01_tilechunk_0029.gml</script>
+        </scripts>
+        <scripts name="template_02">
+          <script>scripts\chamber_template_02_chunk_0000.gml</script>
+          <script>scripts\chamber_template_02_chunk_0001.gml</script>
+          <script>scripts\chamber_template_02_chunk_0002.gml</script>
+          <script>scripts\chamber_template_02_chunk_0003.gml</script>
+          <script>scripts\chamber_template_02_chunk_0004.gml</script>
+          <script>scripts\chamber_template_02_chunk_0005.gml</script>
+          <script>scripts\chamber_template_02_chunk_0006.gml</script>
+          <script>scripts\chamber_template_02_chunk_0007.gml</script>
+          <script>scripts\chamber_template_02_chunk_0008.gml</script>
+          <script>scripts\chamber_template_02_chunk_0009.gml</script>
+          <script>scripts\chamber_template_02_chunk_0010.gml</script>
+          <script>scripts\chamber_template_02_chunk_0011.gml</script>
+          <script>scripts\chamber_template_02_chunk_0012.gml</script>
+          <script>scripts\chamber_template_02_chunk_0013.gml</script>
+          <script>scripts\chamber_template_02_chunk_0014.gml</script>
+          <script>scripts\chamber_template_02_header.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0000.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0001.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0002.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0003.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0004.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0005.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0006.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0007.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0008.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0009.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0010.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0011.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0012.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0013.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0014.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0015.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0016.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0017.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0018.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0019.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0020.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0021.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0022.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0023.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0024.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0025.gml</script>
+          <script>scripts\chamber_template_02_tilechunk_0026.gml</script>
+        </scripts>
+        <scripts name="template_03">
+          <script>scripts\chamber_template_03_chunk_0000.gml</script>
+          <script>scripts\chamber_template_03_chunk_0001.gml</script>
+          <script>scripts\chamber_template_03_chunk_0002.gml</script>
+          <script>scripts\chamber_template_03_chunk_0003.gml</script>
+          <script>scripts\chamber_template_03_chunk_0004.gml</script>
+          <script>scripts\chamber_template_03_chunk_0005.gml</script>
+          <script>scripts\chamber_template_03_chunk_0006.gml</script>
+          <script>scripts\chamber_template_03_chunk_0007.gml</script>
+          <script>scripts\chamber_template_03_chunk_0008.gml</script>
+          <script>scripts\chamber_template_03_chunk_0009.gml</script>
+          <script>scripts\chamber_template_03_chunk_0010.gml</script>
+          <script>scripts\chamber_template_03_chunk_0011.gml</script>
+          <script>scripts\chamber_template_03_chunk_0012.gml</script>
+          <script>scripts\chamber_template_03_chunk_0013.gml</script>
+          <script>scripts\chamber_template_03_chunk_0014.gml</script>
+          <script>scripts\chamber_template_03_header.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0000.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0001.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0002.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0003.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0004.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0005.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0006.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0007.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0008.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0009.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0010.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0011.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0012.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0013.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0014.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0015.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0016.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0017.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0018.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0019.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0020.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0021.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0022.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0023.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0024.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0025.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0026.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0027.gml</script>
+          <script>scripts\chamber_template_03_tilechunk_0028.gml</script>
+        </scripts>
+        <scripts name="template_04">
+          <script>scripts\chamber_template_04_chunk_0000.gml</script>
+          <script>scripts\chamber_template_04_chunk_0001.gml</script>
+          <script>scripts\chamber_template_04_chunk_0002.gml</script>
+          <script>scripts\chamber_template_04_chunk_0003.gml</script>
+          <script>scripts\chamber_template_04_chunk_0004.gml</script>
+          <script>scripts\chamber_template_04_chunk_0005.gml</script>
+          <script>scripts\chamber_template_04_chunk_0006.gml</script>
+          <script>scripts\chamber_template_04_chunk_0007.gml</script>
+          <script>scripts\chamber_template_04_chunk_0008.gml</script>
+          <script>scripts\chamber_template_04_chunk_0009.gml</script>
+          <script>scripts\chamber_template_04_chunk_0010.gml</script>
+          <script>scripts\chamber_template_04_chunk_0011.gml</script>
+          <script>scripts\chamber_template_04_chunk_0012.gml</script>
+          <script>scripts\chamber_template_04_chunk_0013.gml</script>
+          <script>scripts\chamber_template_04_chunk_0014.gml</script>
+          <script>scripts\chamber_template_04_header.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0000.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0001.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0002.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0003.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0004.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0005.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0006.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0007.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0008.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0009.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0010.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0011.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0012.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0013.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0014.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0015.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0016.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0017.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0018.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0019.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0020.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0021.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0022.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0023.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0024.gml</script>
+          <script>scripts\chamber_template_04_tilechunk_0025.gml</script>
+        </scripts>
+        <scripts name="template_05">
+          <script>scripts\chamber_template_05_chunk_0000.gml</script>
+          <script>scripts\chamber_template_05_chunk_0001.gml</script>
+          <script>scripts\chamber_template_05_chunk_0002.gml</script>
+          <script>scripts\chamber_template_05_chunk_0003.gml</script>
+          <script>scripts\chamber_template_05_chunk_0004.gml</script>
+          <script>scripts\chamber_template_05_chunk_0005.gml</script>
+          <script>scripts\chamber_template_05_chunk_0006.gml</script>
+          <script>scripts\chamber_template_05_chunk_0007.gml</script>
+          <script>scripts\chamber_template_05_chunk_0008.gml</script>
+          <script>scripts\chamber_template_05_chunk_0009.gml</script>
+          <script>scripts\chamber_template_05_chunk_0010.gml</script>
+          <script>scripts\chamber_template_05_chunk_0011.gml</script>
+          <script>scripts\chamber_template_05_chunk_0012.gml</script>
+          <script>scripts\chamber_template_05_chunk_0013.gml</script>
+          <script>scripts\chamber_template_05_chunk_0014.gml</script>
+          <script>scripts\chamber_template_05_header.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0000.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0001.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0002.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0003.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0004.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0005.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0006.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0007.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0008.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0009.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0010.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0011.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0012.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0013.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0014.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0015.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0016.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0017.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0018.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0019.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0020.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0021.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0022.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0023.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0024.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0025.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0026.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0027.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0028.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0029.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0030.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0031.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0032.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0033.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0034.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0035.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0036.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0037.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0038.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0039.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0040.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0041.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0042.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0043.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0044.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0045.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0046.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0047.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0048.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0049.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0050.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0051.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0052.gml</script>
+          <script>scripts\chamber_template_05_tilechunk_0053.gml</script>
+        </scripts>
+      </scripts>
+      <scripts name="Prebuilt Chambers">
+        <scripts name="Lair Chambers">
+          <scripts name="Lair Chamber 0">
+            <script>scripts\lair_template_0_chunk_0000.gml</script>
+            <script>scripts\lair_template_0_chunk_0001.gml</script>
+            <script>scripts\lair_template_0_chunk_0002.gml</script>
+            <script>scripts\lair_template_0_chunk_0003.gml</script>
+            <script>scripts\lair_template_0_chunk_0004.gml</script>
+            <script>scripts\lair_template_0_chunk_0005.gml</script>
+            <script>scripts\lair_template_0_chunk_0006.gml</script>
+            <script>scripts\lair_template_0_chunk_0007.gml</script>
+            <script>scripts\lair_template_0_header.gml</script>
+            <script>scripts\lair_template_0_tilechunk_0000.gml</script>
+            <script>scripts\lair_template_0_tilechunk_0001.gml</script>
+            <script>scripts\lair_template_0_tilechunk_0002.gml</script>
+            <script>scripts\lair_template_0_tilechunk_0003.gml</script>
+            <script>scripts\lair_template_0_tilechunk_0004.gml</script>
+            <script>scripts\lair_template_0_tilechunk_0005.gml</script>
+            <script>scripts\lair_template_0_tilechunk_0006.gml</script>
+            <script>scripts\lair_template_0_tilechunk_0007.gml</script>
+            <script>scripts\lair_template_0_tilechunk_0008.gml</script>
+            <script>scripts\lair_template_0_tilechunk_0009.gml</script>
+            <script>scripts\lair_template_0_tilechunk_0010.gml</script>
+            <script>scripts\lair_template_0_tilechunk_0011.gml</script>
+            <script>scripts\lair_template_0_tilechunk_0012.gml</script>
+            <script>scripts\lair_template_0_tilechunk_0013.gml</script>
+          </scripts>
+        </scripts>
       </scripts>
     </scripts>
     <scripts name="Collisions and Physics">
@@ -532,6 +852,7 @@
     <font>fonts\font2</font>
     <font>fonts\font1</font>
     <font>fonts\my_font</font>
+    <font>fonts\font3</font>
   </fonts>
   <objects name="objects">
     <objects name="Control">
@@ -708,6 +1029,7 @@
       <object>objects\obj_doodad_story_bossrock</object>
       <object>objects\obj_doodad_bossarena01screen</object>
       <object>objects\obj_tent</object>
+      <object>objects\obj_doodad_tree_00</object>
     </objects>
     <objects name="Skill Objects">
       <object>objects\obj_skill_poisonuse</object>
@@ -719,10 +1041,10 @@
     </objects>
     <objects name="Menus">
       <object>objects\obj_menu_parent</object>
+      <object>objects\obj_submenu</object>
       <object>objects\obj_selection</object>
       <object>objects\obj_menupanel_parent</object>
       <object>objects\obj_btn</object>
-      <object>objects\obj_submenu</object>
       <objects name="Main Menus">
         <object>objects\obj_selector1</object>
         <object>objects\obj_selector_options</object>
@@ -799,7 +1121,6 @@
       <object>objects\obj_debugger</object>
     </objects>
     <objects name="Dungeons">
-      <object>objects\obj_dungeon_cave</object>
       <object>objects\obj_dungeon_dismalwaste</object>
       <object>objects\obj_dungeon_arena</object>
       <object>objects\obj_dungeon_yahazeer</object>

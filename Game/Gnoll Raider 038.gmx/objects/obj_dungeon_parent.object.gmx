@@ -78,7 +78,7 @@ if(entering){
   case 0: //if !defined, create abstract objects from scripts
     if(lc &lt; destined_chamber.chunk_count || destined_chamber.is_defined){
       with (destined_chamber){
-        script_execute(chunk[crnt_dungeon.lc]);
+        script_execute(chunk[crnt_dungeon.lc],0,0);
       }
       lc += 1;
     }else{
@@ -91,8 +91,11 @@ if(entering){
     //create the chamber cells
     l = ds_list_size(destined_chamber.cell_list);
     if(lc &lt; l){
-      for(i=0;i&lt;100 &amp;&amp; lc&lt;l;i+=1){
-        cell = ds_list_find_value(destined_chamber.cell_list,i);
+      for(i=0;i&lt;group_size &amp;&amp; lc&lt;l;i+=1){
+        cell = ds_list_find_value(destined_chamber.cell_list,lc);
+        with(cell){
+        if(is_undefined(cell_z)){show_message(crnt_dungeon.lc)}
+        }
         lastcreated = instance_create(cell.cell_x,cell.cell_y,cell.cell_type);
         lastcreated.z = cell.cell_z;
         lastcreated.tileset = tileset;
@@ -110,8 +113,8 @@ if(entering){
     //after all cells have been created, call constructors
     l = ds_list_size(destined_chamber.cell_list);
     if(lc &lt; l){
-      for(i=0;i&lt;100 &amp;&amp; lc&lt;l ;i+=1){
-        cell = ds_list_find_value(destined_chamber.cell_list,i);
+      for(i=0;i&lt;group_size &amp;&amp; lc&lt;l ;i+=1){
+        cell = ds_list_find_value(destined_chamber.cell_list,lc);
         lastcreated = cell.manifestation;
         with (lastcreated){event_user(0);}
         lc += 1;
@@ -126,8 +129,8 @@ if(entering){
       //create npcs
       l = ds_list_size(destined_chamber.npc_list);
       if(lc&lt;l){
-        for(i=0;i&lt;100 &amp;&amp; lc&lt;l;i+=1){
-          npc = ds_list_find_value(destined_chamber.npc_list,i);
+        for(i=0;i&lt;group_size &amp;&amp; lc&lt;l;i+=1){
+          npc = ds_list_find_value(destined_chamber.npc_list,lc);
           lastcreated = instance_create(npc.npc_x,npc.npc_y,npc.npc_type);
           if(npc.npc_hp &gt; 0){
             lastcreated.hitpoints = npc.npc_hp;
@@ -148,7 +151,7 @@ if(entering){
   case 4: //create tiles
     if(lc &lt; destined_chamber.tile_chunk_count){
       with (destined_chamber){
-        script_execute(tile_chunk[crnt_dungeon.lc]);
+        script_execute(tile_chunk[crnt_dungeon.lc],0,0);
       }
       lc += 1;
     }else{
@@ -163,6 +166,7 @@ if(entering){
         xpos = destined_chamber.startlocation_main.cell_x;
         ypos = destined_chamber.startlocation_main.cell_y;
       }
+      crnt_chamber = destined_chamber;
       character_spawn(xpos,ypos);
       //end load
       entering = false;
@@ -193,18 +197,14 @@ if(entering){
             <kind>1</kind>
             <string>///Transition (Exit)
 if(exiting){
-  crnt_chamber = destined_chamber;
   var l,crnt_npc;
   switch(load_phase){
   case 0: //delete existing room objects
     if(lc &gt;= 0){
       //lc = ds_list_size(npc_list);//put this in the external call bit
-      for(i=0;i&lt;group_size;i+=1){
-        if(i &lt; 0){
-          break;
-        }
+      for(i=0;i&lt;group_size &amp;&amp; lc &gt;= 0;i+=1){
         crnt_npc = crnt_chamber.npc_list[|lc];
-        if (instance_exists(crnt_npc.manifestation)){
+        if (!crnt_npc.dead){
           crnt_npc.npc_x = crnt_npc.manifestation.x;
           crnt_npc.npc_y = crnt_npc.manifestation.y;
           crnt_npc.npc_hp = crnt_npc.manifestation.hitpoints;
@@ -223,12 +223,12 @@ if(exiting){
         instance_destroy();
       }
       lc = 0;
-      load_phase = 1;
+      load_phase += 1;
     }
     break;
   case 1: //delete existing room tiles
     if(lc &lt; room_height + 256){
-      l = 200;
+      l = group_size;
       for(i=0;i&lt;l;i+=1){
         tile_layer_delete(room_height-lc*16);
         lc += 1;
@@ -236,8 +236,7 @@ if(exiting){
     }else{
       exiting = false;
       if(transition_type == "chamber_to_chamber"){
-        lc = 0;
-        event_user(0);
+        event_user(0);//enter next room
       }
     }
     break;
@@ -266,21 +265,10 @@ if(exiting){
           <argument>
             <kind>1</kind>
             <string>///Exit Room
-with (destined_chamber){
-  var l,crnt_npc;
-  l = ds_list_size(npc_list);
-  for(i=l-1;i&gt;=0;i-=1){
-    crnt_npc = npc_list[|i];
-    if (instance_exists(crnt_npc.manifestation)){
-      crnt_npc.npc_x = crnt_npc.manifestation.x;
-      crnt_npc.npc_y = crnt_npc.manifestation.y;
-      crnt_npc.npc_hp = crnt_npc.manifestation.hitpoints;
-      with (crnt_npc.manifestation){instance_destroy();}
-    }else{
-      ds_list_delete(npc_list,i);
-    }
-  }
-}
+exiting = true;
+lc = ds_list_size(crnt_chamber.npc_list)-1;
+load_phase = 0;
+
 
 </string>
           </argument>
@@ -306,13 +294,15 @@ with (destined_chamber){
             <kind>1</kind>
             <string>///Enter Room
 
-background_color = tileset.tileset_color;
+background_color = tileset.color;
 destined_chamber.npcid_index = 0; //start a new array of npcs
 //if the chamber hasn't been generated already, generate it.
 if (!destined_chamber.is_defined){
     with(destined_chamber){generate_chamber();}
 }
 entering = true;
+lc = 0;
+load_phase = 0;
 </string>
           </argument>
         </arguments>

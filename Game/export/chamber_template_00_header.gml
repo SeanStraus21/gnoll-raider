@@ -1,9 +1,0 @@
-chunk_count=3;
-chunk[0]=chamber_template_00_chunk_0000;
-chunk[1]=chamber_template_00_chunk_0001;
-chunk[2]=chamber_template_00_chunk_0002;
-tile_chunk_count=4;
-tile_chunk[0]=chamber_template_00_tilechunk_0000;
-tile_chunk[1]=chamber_template_00_tilechunk_0001;
-tile_chunk[2]=chamber_template_00_tilechunk_0002;
-tile_chunk[3]=chamber_template_00_tilechunk_0003;

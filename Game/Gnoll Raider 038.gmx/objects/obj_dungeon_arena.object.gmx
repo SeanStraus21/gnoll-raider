@@ -112,6 +112,7 @@ gangrene = false;
 entering = false;
 exiting = false;
 load_phase = 0;
+group_size = 200;
 lc = 0;
 transition_type = "room_to_chamber";
 if (global.master){

@@ -31,8 +31,11 @@ mid = tileset_badlands_mid;
 ground = tileset_badlands_ground;
 cliffbase_left = tileset_badlands_cliffbase_left;
 cliffbase_right = tileset_badlands_cliffbase_right;
-tileset_door = spr_door_badlands;
-tileset_color = $00B6FF;//that garish mustard color
+door = spr_door_badlands;
+door_empty = spr_door_empty_badlands;
+ramp_NE = spr_ramp_NE_badlands;
+ramp_NW = spr_ramp_NW_badlands;
+color = $00B6FF;//that garish mustard color
 </string>
           </argument>
         </arguments>

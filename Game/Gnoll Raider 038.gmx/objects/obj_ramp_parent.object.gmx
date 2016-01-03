@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Draw Ramp
-draw_sprite(sprite_index,(z div cell_h) mod 2,x,y-z/2);
+draw_sprite(sprite_index,(z div cell_h) mod 2,x,y-((z div (cell_h*2))*cell_h));
 </string>
           </argument>
         </arguments>

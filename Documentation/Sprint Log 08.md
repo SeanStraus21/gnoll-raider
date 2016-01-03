@@ -30,6 +30,7 @@ Date: 12/31/2015
  - impediments: more holiday crap
  
 Day 6 Scrum Meeting:
+Date: 01/01/2016
  - Updated Save-Load system for the level editor
  - Began Work on 
 

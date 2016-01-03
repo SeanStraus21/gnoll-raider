@@ -166,6 +166,57 @@ end_dialogue(id,dlg_menu);
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="12">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Start Conversation
+
+//play theme song
+sound_stop(snd_lair);
+sound_loop(theme_song);
+
+//look at speaker
+dir = point_direction(x,y,ds_list_find_value(dlg_menu.participants,0).x,ds_list_find_value(dlg_menu.participants,0).y);
+
+//determine opening phrase
+ds_list_copy(dlg_log,dialogue_log_append(npc_dialogue[0]));
+log_pcount = (ds_list_size(dlg_log) div dlg_menu.logwin_lnum) + ((ds_list_size(dlg_log) mod dlg_menu.logwin_lnum) &gt;0);
+//determine starting options
+ds_list_clear(dlg_opts);
+ds_list_add(dlg_opts,pc_dialogue[0]);
+if (mu_hp[crnt_pnum]&lt;mu_mhp[crnt_pnum]){ds_list_add(dlg_opts,pc_dialogue[1]);}
+ds_list_add(dlg_opts,pc_dialogue[5]);
+ds_list_add(dlg_opts,pc_dialogue[4]);
+//assign retrieval keys
+ds_list_clear(dlg_opt_ids);
+ds_list_add(dlg_opt_ids,0);
+if (mu_hp[crnt_pnum]&lt;mu_mhp[crnt_pnum]){ds_list_add(dlg_opt_ids,1);}
+ds_list_add(dlg_opt_ids,5);
+ds_list_add(dlg_opt_ids,4);
+
+talking = true;
+ds_list_clear(dlg_menu.display_log);
+ds_list_add(dlg_menu.display_log,"");
+alarm[1] = talk_spd;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="11">
       <action>
         <libid>1</libid>
@@ -420,57 +471,6 @@ if (dlg_menu.position_x == 0) &amp;&amp; (talking == false) &amp;&amp; !(dlg_ove
       }
     }
   }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="10">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Start Conversation
-
-//play theme song
-sound_stop(snd_lair);
-sound_loop(theme_song);
-
-//look at speaker
-dir = point_direction(x,y,ds_list_find_value(dlg_menu.participants,0).x,ds_list_find_value(dlg_menu.participants,0).y);
-
-//determine opening phrase
-ds_list_copy(dlg_log,dialogue_log_append(npc_dialogue[0]));
-log_pcount = (ds_list_size(dlg_log) div dlg_menu.logwin_lnum) + ((ds_list_size(dlg_log) mod dlg_menu.logwin_lnum) &gt;0);
-//determine starting options
-ds_list_clear(dlg_opts);
-ds_list_add(dlg_opts,pc_dialogue[0]);
-if (mu_hp[crnt_pnum]&lt;mu_mhp[crnt_pnum]){ds_list_add(dlg_opts,pc_dialogue[1]);}
-ds_list_add(dlg_opts,pc_dialogue[5]);
-ds_list_add(dlg_opts,pc_dialogue[4]);
-//assign retrieval keys
-ds_list_clear(dlg_opt_ids);
-ds_list_add(dlg_opt_ids,0);
-if (mu_hp[crnt_pnum]&lt;mu_mhp[crnt_pnum]){ds_list_add(dlg_opt_ids,1);}
-ds_list_add(dlg_opt_ids,5);
-ds_list_add(dlg_opt_ids,4);
-
-talking = true;
-ds_list_clear(dlg_menu.display_log);
-ds_list_add(dlg_menu.display_log,"");
-alarm[1] = talk_spd;
 </string>
           </argument>
         </arguments>

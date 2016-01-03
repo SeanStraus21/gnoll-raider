@@ -27,9 +27,10 @@
             <kind>1</kind>
             <string>z = 0;
 d = 32;
-depth = room_height-y-200;
+depth = room_height-y-1;
 sloped = true;
 ascent_direction = 2;//northwest
+sprite_index = crnt_dungeon.tileset.ramp_NW;
 
 //determine slope properties
 a = get_iso_135d(x+cell_w,y+cell_h/2);//south end of ramp isometric latitude

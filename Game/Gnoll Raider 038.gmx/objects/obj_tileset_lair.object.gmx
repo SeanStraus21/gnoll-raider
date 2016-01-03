@@ -25,12 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>tileset_bottom = tileset_lair;
-tileset_top = tileset_lair_top;
-tileset_floor = floor_badlands;
-tileset_door = spr_door_dismalwaste;
-tileset_color = $2c1415; //dark blue
-//tileset_color = $624552;//pale bluish purple
+            <string>bot = tileset_lair;
+cap = tileset_badlands_cap;
+top = tileset_badlands_top;
+mid = tileset_badlands_mid;
+ground = tileset_badlands_ground;
+cliffbase_left = tileset_badlands_cliffbase_left;
+cliffbase_right = tileset_badlands_cliffbase_right;
+door = spr_door_badlands
+door_empty = spr_door_empty_badlands;
+ramp_NE = spr_ramp_NE_badlands;
+ramp_NW = spr_ramp_NW_badlands;
+color = $2c1415; //dark blue
+//color = $624552;//pale bluish purple
 </string>
           </argument>
         </arguments>

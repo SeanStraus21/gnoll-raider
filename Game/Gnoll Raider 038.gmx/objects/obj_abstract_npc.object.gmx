@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///declare local variables
+dead = false;
 npc_type = noone;
 npc_x = 0;
 npc_y = 0;

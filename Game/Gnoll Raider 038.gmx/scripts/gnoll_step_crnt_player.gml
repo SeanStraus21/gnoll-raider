@@ -1,5 +1,6 @@
 if(crnt_dungeon != noone){
   if(crnt_dungeon.entering || crnt_dungeon.exiting){
+    image_speed = 0;
     exit;
   }
 }

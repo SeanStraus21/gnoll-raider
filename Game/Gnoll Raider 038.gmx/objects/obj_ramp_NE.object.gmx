@@ -30,6 +30,7 @@ d = 32;//depth dimension
 depth = room_height-y-1;//draw depth
 sloped = true;
 ascent_direction = 1;//northeast
+sprite_index = crnt_dungeon.tileset.ramp_NE;
 
 //determine slope properties
 a = get_iso_45d(x,y+cell_h/2);//south end of ramp isometric latitude

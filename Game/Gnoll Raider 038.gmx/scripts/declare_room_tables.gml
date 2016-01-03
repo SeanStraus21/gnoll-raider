@@ -20,4 +20,4 @@ portal_list[7] = obj_portal_test;
 
 //declare dungeon list
 dungeon_list[0] = obj_dungeon_dismalwaste;
-dungeon_list[1] = obj_dungeon_cave;
+dungeon_list[1] = obj_dungeon_boneyard;

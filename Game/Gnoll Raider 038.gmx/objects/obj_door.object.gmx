@@ -52,12 +52,11 @@ if crnt_pnum = controlling_player{
       slave_sendall();
       if (allclear || cjp == 1){ //if allclear or singleplayer
         allclear = false;
-        crnt_dungeon.destination_coordinates = other.startlocation_id;
+        //crnt_dungeon.destination_coordinates = other.startlocation_id;
+        destination_coordinates = other.startlocation_id;
         crnt_dungeon.destined_chamber = ds_list_find_value(crnt_dungeon.chamber_list,other.destination);
+        crnt_dungeon.transition_type = "chamber_to_chamber";
         with crnt_dungeon{event_user(1);}
-        
-        with crnt_dungeon{event_user(0);}
-
       }
     }else{
       //writeint(other.portal_id);
@@ -88,10 +87,8 @@ if crnt_pnum = controlling_player{
           <argument>
             <kind>1</kind>
             <string>///Constructor
-//sprite_index = abstract.chamber.dungeon.tileset.tileset_door;
-sprite_index = crnt_dungeon.tileset.tileset_door;
-image_speed = 0;
-image_index = abstract.entrance_id;
+//sprite_index = abstract.chamber.dungeon.tileset.door;
+sprite_index = crnt_dungeon.tileset.door;
 depth = room_height - y;
 var w,h,grid_w;
 w = 9+2;
@@ -99,6 +96,30 @@ h = 9+2;
 grid_w = 128;
 destination = crnt_dungeon.destined_chamber.adjacent[abstract.entrance_id].list_index;
 startlocation_id = (abstract.entrance_id + 2) mod 4;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw Door
+draw_sprite(sprite_index,abstract.entrance_id,x,y-(z/2));
 </string>
           </argument>
         </arguments>

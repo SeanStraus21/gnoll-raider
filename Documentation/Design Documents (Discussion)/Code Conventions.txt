@@ -10,6 +10,8 @@ Reserved Events
 		user 14: handle scroll (required by scrolling submenu)
 		user 13:
 		
+	For dungeon cells
+		user 0: Constructor
 	For Units:
 		
 		

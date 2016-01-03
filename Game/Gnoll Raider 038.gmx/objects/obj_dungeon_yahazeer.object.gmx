@@ -25,7 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.master){
+            <string>entering = false;
+exiting = false;
+load_phase = 0;
+group_size = 200;
+lc = 0;
+transition_type = "room_to_chamber";
+if (global.master){
   dungeon_seed = floor(random(32000));  
   clearbuffer();
   writebyte(SEED);
@@ -34,6 +40,7 @@
   slave_sendall();
 }
 random_set_seed(dungeon_seed);
+chamber_schematics_list = ds_list_create();
 chamber_list = ds_list_create();
 door_list = ds_list_create();
 npc_type_list_ground_small = ds_list_create();
@@ -42,7 +49,7 @@ npc_type_list_ground_large = ds_list_create();
 npc_type_list_air_small = ds_list_create();
 npc_type_list_air_medium = ds_list_create();
 npc_type_list_air_large = ds_list_create();
-tileset = instance_create(0,0,obj_tileset_dismalwaste);
+tileset = instance_create(0,0,obj_tileset_lair);
 //generate maze
 maze_h = 2;
 maze_w = 2;
@@ -56,18 +63,14 @@ for(i=0;i&lt;4;i+=1){
 }
 ds_list_add(chamber_list,lastcreated); //room 0
 destined_chamber = lastcreated;
+destined_chamber.dungeon = id;
 
 
 //generate starting chamber
 
 with destined_chamber{
-  is_defined = true;
-  generate_chamber_lair_0();
+  lair_template_0_header();
 }
-//set start location
-
-global.startx = (destined_chamber.startlocation_main.cell_x);
-global.starty = (destined_chamber.startlocation_main.cell_y);
 
 </string>
           </argument>

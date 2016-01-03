@@ -25,7 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.master){
+            <string>entering = false;
+exiting = false;
+load_phase = 0;
+group_size = 200;
+lc = 0;
+transition_type = "room_to_chamber";
+if (global.master){
   dungeon_seed = floor(random(32000));  
   clearbuffer();
   writebyte(SEED);
@@ -52,26 +58,17 @@ ds_list_add(npc_type_list_ground_large,obj_enemy_corruptknight);
 
 //Chamber Schematics List
 chamber_schematics_list = ds_list_create();
-ds_list_add(chamber_schematics_list,generate_chamber_01);
-ds_list_add(chamber_schematics_list,generate_chamber_02);
-ds_list_add(chamber_schematics_list,generate_chamber_03);
-ds_list_add(chamber_schematics_list,generate_chamber_04);
-ds_list_add(chamber_schematics_list,generate_chamber_05);
+ds_list_add(chamber_schematics_list,chamber_template_00_header);
+ds_list_add(chamber_schematics_list,chamber_template_01_header);
+ds_list_add(chamber_schematics_list,chamber_template_02_header);
+ds_list_add(chamber_schematics_list,chamber_template_03_header);
+ds_list_add(chamber_schematics_list,chamber_template_04_header);
+ds_list_add(chamber_schematics_list,chamber_template_05_header);
 
 //Generate Dungeon
 maze_h = 2;
 maze_w = 2;
 generate_dungeon();
-
-//Generate Initial Chamber
-with destined_chamber{
-  is_defined = true;
-  generate_chamber(rw,rh);
-}
-
-//Set Global Start Location
-global.startx = (destined_chamber.startlocation_main.cell_x);
-global.starty = (destined_chamber.startlocation_main.cell_y);
 
 </string>
           </argument>

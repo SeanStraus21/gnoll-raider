@@ -489,6 +489,7 @@ gnoll_step_crnt_player();
 
 
 //Paranoia
+depth = room_height-y-31;
 mmdir[crnt_pnum] = dir_move;
 mfdir[crnt_pnum] = dir_face;
 </string>
@@ -625,11 +626,11 @@ if (x==xprevious &amp;&amp; y==yprevious){
           <argument>
             <kind>1</kind>
             <string>///Draw Stuff
-draw_sprite(spr_shadow_medium,0,x,y);
+draw_sprite(spr_shadow_medium,0,x,y-(base_z/2)-32);
 if (sneaking){
-  draw_sprite_ext(sprite_index,-1,x,y-z,1,1,0,c_white,0.5);
+  draw_sprite_ext(sprite_index,-1,x,y-(z/2)-32,1,1,0,c_white,0.5);
 }else{
-  draw_sprite(sprite_index,-1,x,y-z);
+  draw_sprite(sprite_index,-1,x,y-(z/2)-32);
 }
 </string>
           </argument>
