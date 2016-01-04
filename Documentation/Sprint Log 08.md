@@ -32,7 +32,11 @@ Date: 12/31/2015
 Day 6 Scrum Meeting:
 Date: 01/01/2016
  - Updated Save-Load system for the level editor
- - Began Work on 
+ - Began Work on AI
+ 
+Day 7 Scrum Meeting:
+Date: 01/02/2016
+ - Fixed one thousand and one random bugs
 
 For the Next Daily Scrum I will:
  - 1. implement loading screen and segmented loading system

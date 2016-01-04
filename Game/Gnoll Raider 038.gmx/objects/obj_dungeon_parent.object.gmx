@@ -93,9 +93,6 @@ if(entering){
     if(lc &lt; l){
       for(i=0;i&lt;group_size &amp;&amp; lc&lt;l;i+=1){
         cell = ds_list_find_value(destined_chamber.cell_list,lc);
-        with(cell){
-        if(is_undefined(cell_z)){show_message(crnt_dungeon.lc)}
-        }
         lastcreated = instance_create(cell.cell_x,cell.cell_y,cell.cell_type);
         lastcreated.z = cell.cell_z;
         lastcreated.tileset = tileset;

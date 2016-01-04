@@ -52,12 +52,7 @@ ds_list_add(npc_type_list_ground_large,obj_enemy_corruptknight);
 
 //Chamber Schematics List
 chamber_schematics_list = ds_list_create();
-ds_list_add(chamber_schematics_list,chamber_template_00_header);
-ds_list_add(chamber_schematics_list,chamber_template_01_header);
-ds_list_add(chamber_schematics_list,chamber_template_02_header);
-ds_list_add(chamber_schematics_list,chamber_template_03_header);
-ds_list_add(chamber_schematics_list,chamber_template_04_header);
-ds_list_add(chamber_schematics_list,chamber_template_05_header);
+ds_list_add(chamber_schematics_list,chamber_template_06_header);
 
 //Generate Dungeon
 maze_h = 2;

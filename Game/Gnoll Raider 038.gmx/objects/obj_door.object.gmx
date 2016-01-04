@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>5</depth>
   <persistent>0</persistent>
-  <parentName>obj_cell_parent</parentName>
+  <parentName>obj_terrain_parent</parentName>
   <maskName>spr_mask_iso64x32</maskName>
   <events>
     <event eventtype="4" ename="obj_gnoll">
@@ -90,6 +90,7 @@ if crnt_pnum = controlling_player{
 //sprite_index = abstract.chamber.dungeon.tileset.door;
 sprite_index = crnt_dungeon.tileset.door;
 depth = room_height - y;
+sloped = false;
 var w,h,grid_w;
 w = 9+2;
 h = 9+2;
@@ -119,7 +120,7 @@ startlocation_id = (abstract.entrance_id + 2) mod 4;
           <argument>
             <kind>1</kind>
             <string>///Draw Door
-draw_sprite(sprite_index,abstract.entrance_id,x,y-(z/2));
+draw_sprite(sprite_index,abstract.entrance_id,x,y-(z/2)-32);
 </string>
           </argument>
         </arguments>

@@ -153,6 +153,7 @@ generate_dungeon();
 
 with destined_chamber{
   generate_chamber(0,0);
+  is_determined = true;
 }
 
 /*

@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-256</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -232,6 +232,7 @@ if (cjp &gt; 1){   //draw otherplayers stuff
   }
 }
 //draw current player's stuff
+/*
 draw_sprite(spricon[mu_spr[crnt_pnum]],mu_icon[crnt_pnum],view_xview+618,view_yview+624)
 draw_text(view_xview+663,view_yview+603,(pname[crnt_pnum]))
 draw_sprite(spr_coin_small_2,0,view_xview+630,view_yview+684)
@@ -274,7 +275,7 @@ var xpos,ypos;
 xpos = view_xview[0];
 ypos = view_yview[0]+624;
 
-draw_sprite(spr_uibar,0,xpos,ypos);
+//draw_sprite(spr_uibar,0,xpos,ypos);
 
 //draw character skill icons
 for(i=0;i&lt;4;i+=1){
@@ -415,6 +416,29 @@ if instance_exists(obj_candummy)
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!instance_exists(obj_menu_parent)){
+  draw_HUD();
+}
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
   </events>

@@ -40,13 +40,8 @@ btn_labels[4] = "Run Awaaay!";
 
 
 arena_chambers = ds_list_create();
-ds_list_add(arena_chambers,chamber_template_00_header);
-ds_list_add(arena_chambers,chamber_template_01_header);
-ds_list_add(arena_chambers,chamber_template_02_header);
-ds_list_add(arena_chambers,chamber_template_03_header);
-ds_list_add(arena_chambers,chamber_template_04_header);
-ds_list_add(arena_chambers,chamber_template_05_header);
-chamber_name[0] = "Chamber 0";
+ds_list_add(arena_chambers,chamber_template_06_header);
+chamber_name[0] = "Chamber 6";
 chamber_name[1] = "Chamber 1";
 chamber_name[2] = "Chamber 2";
 chamber_name[3] = "Chamber 3";

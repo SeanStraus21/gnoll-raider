@@ -30,6 +30,7 @@ exiting = false;
 load_phase = 0;
 group_size = 200;
 lc = 0;
+stair_template = chamber_template_06_header;
 transition_type = "room_to_chamber";
 if (global.master){
   dungeon_seed = floor(random(32000));  
@@ -69,6 +70,7 @@ destined_chamber.dungeon = id;
 //generate starting chamber
 
 with destined_chamber{
+  is_determined = true;
   lair_template_0_header();
 }
 

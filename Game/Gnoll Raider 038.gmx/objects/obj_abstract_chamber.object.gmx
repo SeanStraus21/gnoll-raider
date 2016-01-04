@@ -44,6 +44,7 @@ chamber_index = -1;
 variation_index = 0;
 npc_list = ds_list_create();
 cell_list = ds_list_create();
+is_determined = false;
 is_defined = false;
 grid_w = 128;
 rw = 9;

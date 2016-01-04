@@ -64,7 +64,13 @@ for(i=0;i<l;i+=1){
 
 stair_chamber = destined_chamber;
 l = ds_list_size(chamber_list);
-while(stair_chamber == destined_chamber && l>1){
-  stair_chamber = ds_list_find_value(chamber_list,floor(random(l)));
+if(l>1){
+  while(stair_chamber == destined_chamber){
+    stair_chamber = ds_list_find_value(chamber_list,floor(random(l)));
+  }
+  with (stair_chamber){
+    is_determined = true;
+    script_execute(dungeon.stair_template);
+  }
 }
 

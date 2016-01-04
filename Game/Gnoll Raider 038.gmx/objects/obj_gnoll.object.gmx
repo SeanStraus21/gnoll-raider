@@ -42,7 +42,7 @@ jumping = false;
 hitbox = instance_create(x,y,obj_hitbox);
 hitbox.target = id;
 hitbox.sprite_index = spr_hitbox_48x64;
-
+ground = noone;
 //Set Cooldowns
 atk_ready = true;
 sprint_ready = true;
@@ -489,7 +489,9 @@ gnoll_step_crnt_player();
 
 
 //Paranoia
-depth = room_height-y-31;
+if(ground){
+  depth = find_depth(x,y)-15;
+}
 mmdir[crnt_pnum] = dir_move;
 mfdir[crnt_pnum] = dir_face;
 </string>
@@ -626,11 +628,11 @@ if (x==xprevious &amp;&amp; y==yprevious){
           <argument>
             <kind>1</kind>
             <string>///Draw Stuff
-draw_sprite(spr_shadow_medium,0,x,y-(base_z/2)-32);
+draw_sprite(spr_shadow_medium,0,x,y-(base_z/2));
 if (sneaking){
-  draw_sprite_ext(sprite_index,-1,x,y-(z/2)-32,1,1,0,c_white,0.5);
+  draw_sprite_ext(sprite_index,-1,x,y-(z/2)-40,1,1,0,c_white,0.5);
 }else{
-  draw_sprite(sprite_index,-1,x,y-(z/2)-32);
+  draw_sprite(sprite_index,-1,x,y-(z/2)-40);
 }
 </string>
           </argument>
