@@ -29,7 +29,7 @@
 x += spd*cos(degtorad(dir));
 y -= spd*sin(degtorad(dir));
 
-if place_meeting(x,y,obj_pathingblocker_all){
+if (!aerial_point_pathable(x,y)){
   instance_change(obj_projectileAOE,true);
   exit;
 }
@@ -55,11 +55,21 @@ if place_meeting(x,y,obj_pathingblocker_all){
           <argument>
             <kind>1</kind>
             <string>///assign sprite based on speed
+depth = room_height - y;
 if ((xprevious != x) || (yprevious != y))
     {
     //image_index = ((dir+22.5) div 45);
     }
-
+a = round((y+cell_h/2)/cell_h - (x+cell_w/2)/cell_w);
+b = round((y+cell_h/2)/cell_h + (x+cell_w/2)/cell_w);
+ground = instance_position((b - a)/2*cell_w,(b + a)/2*cell_h,obj_terrain_parent);
+if(!ground){exit;}
+if (ground.sloped){
+  base_z = get_slope_z(x,y,ground);
+}else{
+  base_z = ground.z;
+}
+depth = find_depth(x,y);
 </string>
           </argument>
         </arguments>

@@ -53,6 +53,16 @@ baseexp = 0
           <argument>
             <kind>1</kind>
             <string>///set variables
+z = 0;
+w = 64;
+h = 32;
+d = 64;
+
+//hitbox
+hitbox = instance_create(x,y,obj_hitbox);
+hitbox.target = id;
+hitbox.sprite_index = spr_hitbox_48x64;
+ground = noone;
 
 //vital statistics
 hitpoints = 3;
@@ -410,6 +420,27 @@ case 4: //channel ability, etc.
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///pathing
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///set sprite stuff
 
 if (xprevious != x &amp;&amp; yprevious != y){ // if moving, have sprite move, else stop
@@ -567,8 +598,8 @@ alarm[1] = npc_abl_cd;
           <argument>
             <kind>1</kind>
             <string>///Draw Stuff
-draw_sprite(spr_shadow_small,0,x,y);
-draw_self();
+draw_sprite(spr_shadow_small,0,x,y-(base_z/2));
+draw_sprite(sprite_index,image_index,x,y-(z/2));
 
 </string>
           </argument>

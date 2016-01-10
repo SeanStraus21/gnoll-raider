@@ -343,6 +343,7 @@
       <sprite>sprites\spr_mask_isox</sprite>
       <sprite>sprites\spr_mask_2x2</sprite>
       <sprite>sprites\spr_hitbox_48x64</sprite>
+      <sprite>sprites\spr_hitbox_32x64</sprite>
       <sprite>sprites\spr_pathingblocker_mega</sprite>
     </sprites>
     <sprite>sprites\spr_savestation</sprite>
@@ -352,8 +353,6 @@
     <sprite>sprites\spr_shadow_medium</sprite>
     <sprite>sprites\spr_shadow_small</sprite>
     <sprite>sprites\spr_projectile_meteor</sprite>
-    <sprite>sprites\spr_isobot</sprite>
-    <sprite>sprites\spr_isotop</sprite>
     <sprite>sprites\spr_font_p12</sprite>
     <sprite>sprites\spr_menu_window</sprite>
   </sprites>
@@ -407,15 +406,10 @@
       <script>scripts\derive_load_variables.gml</script>
     </scripts>
     <scripts name="Custom Functions">
-      <script>scripts\dialogue_block_format.gml</script>
-      <script>scripts\dialogue_log_append.gml</script>
-      <script>scripts\count_formatted_lines.gml</script>
       <script>scripts\calculate_damage.gml</script>
       <script>scripts\npc_damage.gml</script>
-      <script>scripts\end_dialogue.gml</script>
       <script>scripts\ds_list_find_instances.gml</script>
       <script>scripts\stack_items.gml</script>
-      <script>scripts\shop_dlg_append.gml</script>
       <script>scripts\room_initialize.gml</script>
       <script>scripts\lobby_pslot.gml</script>
       <script>scripts\speed_direction.gml</script>
@@ -584,6 +578,9 @@
       <script>scripts\ramp_pathable.gml</script>
       <script>scripts\move_contact_nonpathable.gml</script>
       <script>scripts\find_depth.gml</script>
+      <script>scripts\get_terrain_line.gml</script>
+      <script>scripts\point_in_tile.gml</script>
+      <script>scripts\place_meeting_3d.gml</script>
     </scripts>
     <scripts name="Networking">
       <scripts name="read">
@@ -602,6 +599,13 @@
       </scripts>
       <script>scripts\clearbuffer.gml</script>
       <script>scripts\sendmessage.gml</script>
+    </scripts>
+    <scripts name="Dialog and Text">
+      <script>scripts\shop_dlg_append.gml</script>
+      <script>scripts\dialogue_log_append.gml</script>
+      <script>scripts\end_dialogue.gml</script>
+      <script>scripts\count_formatted_lines.gml</script>
+      <script>scripts\dialogue_block_format.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -786,6 +790,7 @@
       <object>objects\obj_doodad_bossarena01screen</object>
       <object>objects\obj_tent</object>
       <object>objects\obj_doodad_tree_00</object>
+      <object>objects\obj_doodad_parent</object>
     </objects>
     <objects name="Skill Objects">
       <object>objects\obj_skill_poisonuse</object>

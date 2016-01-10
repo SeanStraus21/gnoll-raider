@@ -10,7 +10,7 @@ b = floor(ypos/cell_h + xpos/cell_w);
 snapx = (b - a)/2*cell_w;
 snapy = (b + a)/2*cell_h;
 
-if (jumping){
+if (airborne){
   target = instance_place(snapx,snapy,obj_terrain_parent);
   //if (place_meeting(xpos,ypos,target) && (abs(target.z - z)>diff || (object_is_ancestor(target.object_index,obj_ramp_parent)&& ramp_pathable(xpos,ypos,target,diff)))){
   if (place_meeting(xpos,ypos,target)){

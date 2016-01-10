@@ -24,6 +24,9 @@ pchar, mu_spr, mu_icon, npcid_array, npcid_index, msneaking, mdodge;
 globalvar mu_graveroom,mu_gravex,mu_gravey;
 //declare utility variables
 globalvar nextroom, roomprevious, allclear, nr_ready, room_index, nextroom_id, room_id, portal_list, mu_portal,temp_socket;
+//declare engine globals
+globalvar collision_keeper;
+//declare fonts
 globalvar font0;
 font0 = font_add_sprite(spr_font_p12, ord(" "), 1, 1);
 //declare the debugger variables

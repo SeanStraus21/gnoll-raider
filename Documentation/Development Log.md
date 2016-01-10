@@ -251,7 +251,7 @@ End Date: 12/26/2015
  - 5. Create a testing mode where we can debug AI and new terrain.
  - 6. If you make it this far, go improve the level design
 	Conclusion: Finally a decent sprint. Of course, considering I had a complete holiday, I guess I shouldn't be so excited. We didn't quite get around to AI, which we knew would be a big thing. We have completed the improved Collision system, as well as a new arena mode in which to test new developments. In addition to these, we did many other things which are less directly impactful. most importantly, we found a way to abstract out some of the repetition involved in making and editing menus. We also did a lot of graphics stuff, both conceptual and actual sprites. We also did a lot of planning and thinking, and that does count for something. Overall, the biggest disappointment is how little these things seem to visibly affect the game. I was hoping for something more amazing during christmas break. Oh well, I'll make it up next sprint.
-	
+
 ### Sprint 08:
 Start Date: 12/27/2015
 End Date: 01/09/2016
@@ -282,3 +282,33 @@ End Date: 01/09/2016
  - 6. Probably this will take the whole two weeks, but you really need to crank out at least a few levels to include the new system
 	 - bigger and better chambers with modern collisions
 	 - loading screen system for large levels
+	Conclusion: Well, this was a good sprint over all. We did not count on the level editor giving us so much trouble, and integrating the new system took much longer than expected. However, we were still able to finish it in time to get a decent chunk of AI programming done. The only real problem with this sprint was that we got a little burned out at the end and went back to doing concept art. However, such things should not really be avoided, even if they could be. besides, I think a graphical update is overdue. incidentally, we adjusted the hitboxes, but this means very little since the combat system is still so primitive. We finally programmed in the new HUD too (part of it anyway).
+
+### Sprint 09:
+Start Date: 01/10/2016
+End Date: 01/23/2016
+
+##### Sprint 09 Goals
+ - 1. Enemy AI
+	 - Complete the basic single player AI
+	 - set up general path finding function
+	 - Implement stealth detection
+	 - Implement camp AI
+	 - implement dynamic group creation
+	 - After finishing the basic guard-type AI, create variants for wandering monsters and stuff
+	 - test in multiplayer
+ - 2. Combat Improvement
+	 - change the way attacking works (pathing, timing etc.)
+	 - make attacks change depending on things like is_airborne and is_jumping
+	 - add graphical indicators to show when a unit is being damaged or knocked back
+	 - add abilities that work
+ - 3. Complete at least one Dungeon
+	 - set up the overworld map better than it is (show information and stuff)
+	 - set up the dungeon generation algorithm to include things like minibosses, bonus objectives, gold count etc.
+	 - put the staircase back in
+	 - create a victory indicator or something
+ - 4. Graphical tinkering
+	 - Fix that obnoxious bug with the tile depth
+	 - experiment with large enemies to make sure they work ok
+	 - fix all the menus that look like they were made by a six year old
+	

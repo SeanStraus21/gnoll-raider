@@ -175,12 +175,12 @@ line_index = 0;
 max_line_index = h;//default maximum value is height. change this later if desired
 if (scroll_enabled){
 //create scrollbuttons
-  scrollbtn_up = instance_create(x+(w/2)-(16),y+h,obj_btn);
+  scrollbtn_up = instance_create(x+(w*(btn_w+btn_x)/2)-(16),y-32,obj_btn);
   scrollbtn_up.sprite_index = spr_btn_arrow_up;
   scrollbtn_up.image_index = 1;
   scrollbtn_up.image_speed = 0;
   
-  scrollbtn_down = instance_create(x+(w/2)-(16),y+h,obj_btn);
+  scrollbtn_down = instance_create(x+(w*(btn_w+btn_x)/2)-(16),y+h*(btn_h+btn_y),obj_btn);
   scrollbtn_down.sprite_index = spr_btn_arrow_down;
   scrollbtn_down.image_index = 0;
   scrollbtn_down.image_speed = 0;

@@ -1,6 +1,7 @@
 /*
-argument0 = id
-argument1 = value
+argument0 = target list
+argument1 = value to search for
+returns the list of indices at which instances of (value) can be found in the original list
 */
 var output;
 

@@ -35,6 +35,7 @@ switch((crnt_dir+22.5) div 45){
     target.y += 32;
     break;
 }
+target.y -= 8;//compensate for mask_height gap
 /*
 switch((crnt_dir+22.5) div 45){
   case 0://East

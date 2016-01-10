@@ -9,8 +9,8 @@
   <bboxmode>0</bboxmode>
   <bbox_left>16</bbox_left>
   <bbox_right>47</bbox_right>
-  <bbox_top>48</bbox_top>
-  <bbox_bottom>62</bbox_bottom>
+  <bbox_top>16</bbox_top>
+  <bbox_bottom>30</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,7 +18,7 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>64</width>
-  <height>64</height>
+  <height>32</height>
   <frames>
     <frame index="0">images\spr_mask_iso32x16_0.png</frame>
   </frames>

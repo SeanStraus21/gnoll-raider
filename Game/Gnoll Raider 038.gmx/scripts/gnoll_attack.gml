@@ -5,6 +5,7 @@ if(crnt_pnum = controlling_player && attack_btn){
     lastcreated = instance_create(x,y,wpnobj[crnt_wpn]);
     projectile_start_position(lastcreated,dir_face);
     lastcreated.z = z;
+    lastcreated.base_z = base_z;
     lastcreated.controlling_player = crnt_pnum;
     lastcreated.dir = dir_face;
     with(lastcreated){event_user(0);}

@@ -38,8 +38,39 @@ Day 7 Scrum Meeting:
 Date: 01/02/2016
  - Fixed one thousand and one random bugs
 
+Day 8 Scrum Meeting:
+Date: 01/03/2016
+ - Worked on some sprites
+
+Day 9
+Date: 01/04/2016
+ - began experimenting with finite state machines
+ - plotted basic enemy AI
+
+Day 10
+Date: 01/05/2016
+ - piddled around with pathing scripts
+ - began writing AI script shell
+
+Day 11
+Date: 01/06/2016
+ - graphics
+
+Day 12
+Date: 01/07/2016
+ - graphics
+
+Day 13
+Date: 01/08/2016
+ - graphics
+
+Day 14
+Date: 01/09/2016
+ - graphics
+
 For the Next Daily Scrum I will:
- - 1. implement loading screen and segmented loading system
- - 2. update chamber generation system to be compatible with new system
- - 3. fix hitboxes
- - 4. begin working on enemy AI
+ - 1. work on enemy AI
+	 - debug Finite State Machine
+	 - fix pathing scripts
+ - 2. paint stuff for loading and gameover screens
+ - 3. fix graphical issues

@@ -92,30 +92,3 @@ if (!jumping){
     z_spd -= 1;
   }
 }
-/* 
-//********** OLD SYSTEM ******************************************
-//xspd = lengthdir_x(crnt_spd,dir_move);
-//yspd = lengthdir_y(crnt_spd,dir_move);
-//if conditions permit, move desired amount
-if (!pivoting && !snared && !channeling && !stunned && controlling_player == crnt_pnum && !instance_exists(obj_menu_parent)){
-  if (place_free(x+xspd,y+yspd)){
-    x += xspd;
-    y += yspd;
-  }else{
-    //move as far as possible in the desired direction
-    //move_contact_solid(dir_move,crnt_spd);
-    if (!place_free(x+xspd,y)){
-      move_contact_solid(270+sign(xspd)*90,xspd);
-      xspd = 0;
-    }else{
-      x += xspd;
-    }
-    if (!place_free(x,y+yspd)){
-      move_contact_solid(180+sign(yspd)*90,yspd);
-      yspd = 0;
-    }else{
-      y += yspd;
-    }
-  }
-}
-
