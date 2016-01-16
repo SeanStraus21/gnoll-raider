@@ -111,6 +111,12 @@ zspd = 0;
 spr_ind = 10;
 image_speed = 0.25;
 
+//awareness
+known_enemies = ds_list_create();
+gw = 12;
+gh = 12;
+known_terrain = ds_grid_create(gw,gh);
+
 //set aggro
 for (i=0;i&lt;cjp;i+=1){
   aggro[i] = 0;
@@ -262,122 +268,7 @@ atk_ready = true;
 var enemy_detected, dest_x, dest_y, interrupted;
 interrupted = false;
 
-switch (behavior){
-case 0: //idle
-  //wander or stand still
-  //check for enemies
-  enemy_detected = false;
-  for (i=0;i&lt;cjp;i+=1){
-    //
-    if (point_distance(x,y,pchar[i].x,pchar[i].y) &lt;= acq_range &amp;&amp; (mu_hp[i]&gt;0)){
-      if (!collision_line(x,y,pchar[i].x,pchar[i].y,obj_pathingblocker_parent,false,true)){
-        if (!pchar[i].sneaking || detect_stealth(pchar[i])){
-          //aggro = personal aggro + relative hp + relative nearness + damage dealt
-          aggro[i] = (pchar[i].aggro + 100*(1 - (mu_hp[i] div mu_mhp[i])) + 100*(1-(point_distance(x,y,pchar[i].x,pchar[i].y) div acq_range)) + 100*(1-(recent_dmg[i] div (mhp-hitpoints+1))));
-          enemy_detected = true;
-        }else{
-          aggro[i] = 0;
-        }
-      }else{
-        aggro[i] = 0;
-      }
-    }else{
-      aggro[i] = 0;
-    }
-  }
-  if (enemy_detected){
-    /*
-    highest_aggro = 0;
-    for (i=0;i&lt;cjp;i+=1){
-      if (aggro[i] &gt; highest_aggro){
-        highest_aggro = aggro[i];
-        target = pchar[i];
-      }
-    }
-    */
-    behavior = 1;
-  }else{
-    //wander,look around,nothing
-  }
-  break;
-case 1: //combat
-  //determine target (aggro+damage+nearness+relative hp)
-  for (i=0;i&lt;cjp;i+=1){
-    //
-    if (point_distance(x,y,pchar[i].x,pchar[i].y) &lt;= acq_range &amp;&amp; (mu_hp[i]&gt;0)){
-      //if !collision_line(x,y,pchar[i].x,pchar[i].y,obj_cliffbase_parent,false,true)
-      if (!pchar[i].sneaking ){
-        //aggro = personal aggro + relative hp + relative nearness + damage dealt
-        aggro[i] = (pchar[i].aggro + 100*(1 - (mu_hp[i] div mu_mhp[i])) + 100*(1-(point_distance(x,y,pchar[i].x,pchar[i].y) div acq_range)) + 100*(1-(recent_dmg[i] div (mhp-hitpoints+1))));
-        enemy_detected = true;
-      }else{
-        aggro[i] = 0;
-      }
-    }else{
-      aggro[i] = 0;
-    }
-  }
-  target = noone;
-  for (i=0;i&lt;cjp;i+=1){
-    if ((aggro[i]&gt;0)&amp;&amp;(target == noone)){
-      target = pchar[i];
-    }else{
-      if (target != noone){
-        if (aggro[i]&gt;0) &amp;&amp; (aggro[i] &gt; aggro[target.controlling_player]){
-          target = pchar[i];
-        }
-      }
-    }
-  }
-  if (target != noone){
-    //if cooldown is up and enemy is in range
-        //{attack;}
-    if(npc_abl_ready &amp;&amp; (point_distance(x,y,target.x,target.y) &lt;= npc_abl_range)){
-      behavior = 4;
-      channel_timer = npc_abl_dur;  
-      action_index = 1;
-      image_speed = 0;
-    }else if (atk_ready &amp;&amp; (point_distance(x,y,target.x,target.y) &lt;= atk_range)){
-      behavior = 4;
-      channel_timer = atk_dur;  
-      action_index = 2;
-      image_speed = 0;
-    }else{
-      mp_potential_step(target.x,target.y,spd,false);//pursue enemy
-    }
-  }else{
-    //lost sight of enemy
-    behavior = 0;
-  }
-  //else 
-      //if cooldown is up
-          //attack
-      //if enemy is moving away
-          //chase
-      //else
-          //if enemy is charging
-              //fall back
-  break;
-case 2: //stalk
-  break;
-    
-case 3: //go home/hide
-  break;
-    
-case 4: //channel ability, etc.
-  if(!interrupted){
-    channel_timer -= 1;
-    
-    if(channel_timer == 0){
-      event_user(action_index);
-      behavior = 1;
-      image_speed = 0.25;
-    }
-  }else{
-  
-  }
-  break;
-}
+AI_basic_main();
 </string>
           </argument>
         </arguments>

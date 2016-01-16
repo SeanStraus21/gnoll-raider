@@ -26,9 +26,9 @@ this assumes that you change the tile destruction thing to be more precise. it m
 	for(i=0;i<room_height div 16; i+=1){
 		depth = i*16*5;
 	}
-Well, actually, if the actual tiles are adjusted based on height, then we will actually have to check between spots, effectively multiplying the number of regions to check by 5. suddenly our O(1) operation becomes an O(n) operation. 
+Well, actually, if the actual tiles are adjusted based on height, then we will actually have to check between spots, effectively multiplying the number of regions to check by 5(or whatever else we do). suddenly our O(1) operation becomes an O(n) operation. 
 
-Instead of adjusting between tiles, lets just make sure that 
+Instead of adjusting tiles, lets just open a crack where we can fit stuff, because honestly, it doesn't matter how tall an object is. its either in front of you or its behind you. the only edge case is when its under you, so what we really need is a tie breaker. we just need a tiny gap between tiles, even if its only 1 . 
 
 
 

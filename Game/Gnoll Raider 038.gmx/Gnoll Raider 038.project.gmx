@@ -460,6 +460,13 @@
       <script>scripts\detect_stealth.gml</script>
       <script>scripts\knock_back.gml</script>
       <script>scripts\has_los.gml</script>
+      <scripts name="Basic Enemy Scripts">
+        <script>scripts\AI_basic_main.gml</script>
+        <script>scripts\AI_basic_combat.gml</script>
+        <script>scripts\AI_basic_transition.gml</script>
+        <script>scripts\AI_basic_idle.gml</script>
+        <script>scripts\AI_basic_ability.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Chamber Schematics">
       <scripts name="Templates">

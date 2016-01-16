@@ -39,19 +39,19 @@ Switch (state)
 		
 Transitional States:
 	Sleeping->Onguard //wake up
-	Offguard->Onguard //become suspicious
-	Offguard->combat  //surprise attack
-	Onguard->Offguard //become bored
+	Offguard->Onguard //become_alert
+	Offguard->combat  //surprised
+	Onguard->Offguard //become_unwary
 	Onguard->Investigating //begin investigation (go to position)
-	Onguard->Combat //Begin Combat
-	Investigating->Onguard //suspicion allayed (go back to old position)
-	Investigating->Hunting //Increased Suspicion
-	Investigating->Combat //Begin Combat
-	Hunting->Onguard //give up pursuit
-	Hunting->Investigating //check this spot
-	Hunting->Combat //begin combat
+	Onguard->Combat //Begin Combat#1
+	Investigating->Onguard //suspicion_allayed/ Return to position/patrol-route (go back to old position)
+	Investigating->Hunting //become_alarmed
+	Investigating->Combat //Begin Combat#2
+	Hunting->Onguard //end_pursuit
+	Hunting->Investigating //begin investigation 
+	Hunting->Combat //begin combat#3
 	Combat->Hunting //Pursue Fleeing Enemy
-	Combat->Onguard //End Combat
+	Combat->Onguard //End Combat/ Return to position/patrol-route
 	
 Non-Transitional States
 	Take_Damage //knock back and blink

@@ -6,6 +6,12 @@ I know it sounds crazy to use a development methodology for a team of one progra
 
 ##Now about that progress...
 
+Status Report 8: (01/09/2016)
+	And this was the sprint where I cleaned up some of the loose ends from the last sprint, fixed the level editor, merged the new systems into the project, and started working on the AI. A new build was uploaded after this sprint.
+
+Status Report 7: (12/26/2015)
+	So this was the sprint where I got back and spent two weeks completely redoing the pathing system, and menus. also added an arena.
+
 Status Report 6: (12/13/2015)
 	Now that finals are over Progress on gnoll raider will resume. I'm going to keep working on the HUD and UI because that's almsot ready, but I will also try and have some kind of working AI.
 

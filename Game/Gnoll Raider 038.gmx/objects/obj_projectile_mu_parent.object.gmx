@@ -26,13 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>///move
-x += spd*cos(degtorad(dir));
-y -= spd*sin(degtorad(dir));
-
-if (!aerial_point_pathable(x,y)){
+if (!aerial_point_pathable(x + spd*cos(degtorad(dir)),y- spd*sin(degtorad(dir)))){
   instance_change(obj_projectileAOE,true);
   exit;
 }
+x += spd*cos(degtorad(dir));
+y -= spd*sin(degtorad(dir));
+
 
 </string>
           </argument>
@@ -69,7 +69,7 @@ if (ground.sloped){
 }else{
   base_z = ground.z;
 }
-depth = find_depth(x,y);
+depth = find_depth(x,y)-1;
 </string>
           </argument>
         </arguments>
