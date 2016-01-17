@@ -85,7 +85,7 @@ refine_path(path){
 	}
 }
 
-War Room Discussion
+War Room Discussion (Operation A*)
 
 We have discovered a bug. this bug can be reproduced by clicking a particular space.
 our controlled environment creates the bug at the 141st iteration, but path length doesn't seem problematic
@@ -113,3 +113,17 @@ traceback:
 
 could it be relevant what happened for other i's?
  - no, investigation revealed that 0,2,and 3 were not dealt with during or after the 140th iteration
+ 
+so, actually, the deletion was obvious and intentional. in fact, the reason the list is NOT destroyed is because its destruction is what causes the crash. The plot thickens.
+
+GODDAM IT WAS A WILDGOOSECHASE THE  WHOLE TIME
+that stupid debug statement, ds_list_size("jumpship"); it was a complete red herring.
+
+Alright, the real culprit is actually object 100598, which actually looks just like the last suspect
+he was added to openset in iteration 107
+his path was updated in iteration 116
+and he was selected as current node in iteration 140 AND IN 142?!?!
+okay, this is the problem. somehow this node was not deleted properly from the f_score
+Time to investigate...
+
+

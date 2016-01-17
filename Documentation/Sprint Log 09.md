@@ -37,11 +37,26 @@ Date: 01/15/2016
  - kept on debugging
  - hated game maker
 
+Day 7 Scrum Meeting:
+Date: 01/16/2016
+ - completed custom A*
+ - generalized collision checking for objects larger than a single tile
+ - made some utility functions
+ - wrote and debugged line of sight algorithm
+ - expanded AI capabilities(engage, detect enemy, attack_begin, attack_execute, retreat)
+ - graphics
+
 For the Next Daily Scrum I will:
  - 1. work on enemy AI
-	 - set up pathing scripts
-	 - set up state-hierarchy
+	 - advanced features
+		 - pursue
+		 - manage targets
+		 - strafe
+	 - set up aggro system
+	 - improve path reuse
+		 - determine if path is still valuable
+	 - animation programming
  - 2. paint stuff for loading and gameover screens
  - 3. fix graphical issues
-	 - fix that tile-depth issue like we talked about
+	 - fix that tile-depth issue like we talked about (see Improved Tile Depth Solution)
 	 - change that awful yellow tileset
