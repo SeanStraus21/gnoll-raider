@@ -46,6 +46,11 @@ Date: 01/16/2016
  - expanded AI capabilities(engage, detect enemy, attack_begin, attack_execute, retreat)
  - graphics
 
+Day 8 Scrum Meeting:
+Date: 01/17/2016
+ - 
+
+
 For the Next Daily Scrum I will:
  - 1. work on enemy AI
 	 - advanced features
