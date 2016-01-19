@@ -56,3 +56,17 @@ bool glimpse_caught(){
 	}
 	return output;
 }
+
+vision_range_main
+degree_difference		%modifier
+0										100
+90									25
+180									0
+
+1-(diff/360)
+
+vision_range_main
+degree_difference		%modifier
+0										75
+90									50
+180									0
