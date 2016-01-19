@@ -48,8 +48,15 @@ Date: 01/16/2016
 
 Day 8 Scrum Meeting:
 Date: 01/17/2016
- - 
+ - began theta* algorithm
+ - implemented detection routine
+ - implemented combat routines
 
+Day 9 Scrum Meeting:
+Date: 01/18/2016
+ - completed theta* algorithm
+ - began work on path smoothing
+ - worked on bugs with AI movement
 
 For the Next Daily Scrum I will:
  - 1. work on enemy AI
