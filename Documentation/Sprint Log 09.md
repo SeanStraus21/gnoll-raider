@@ -58,15 +58,42 @@ Date: 01/18/2016
  - began work on path smoothing
  - worked on bugs with AI movement
 
+Day 10 Scrum Meeting:
+Date: 01/19/2016
+ - nothing
+Impediments: stuck in traffic for 3+ hours on account of icy roads
+
+Day 11 Scrum Meeting:
+Date: 01/20/2016
+ - discovered AI bugs due to serious flaws in every part of the pathfinding system
+ - attempted to optimize pathfinding
+ - developed region-partitioning algorithm for block A*
+
+Day 12 Scrum Meeting:
+Date: 01/21/2016
+ - fixed linear collision detection routine
+ - Actually completed theta* (for real this time)
+ - started debugging the rest of the mess
+
+Day 13 Scrum Meeting:
+Date: 01/22/2016
+ - worked out several bugs in the local movement phase
+ - started working on some animations for the enemy
+
+Day 14 Scrum Meeting
+Date: 01/23/2016
+ - kept worked on local pathfinding
+ - developed an efficient formula for determining a curved path
+
+
 For the Next Daily Scrum I will:
  - 1. work on enemy AI
+	 - fix enemy movement system
 	 - advanced features
 		 - pursue
 		 - manage targets
 		 - strafe
 	 - set up aggro system
-	 - improve path reuse
-		 - determine if path is still valuable
 	 - animation programming
  - 2. paint stuff for loading and gameover screens
  - 3. fix graphical issues
