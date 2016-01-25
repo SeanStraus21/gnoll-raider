@@ -84,18 +84,3 @@ Day 14 Scrum Meeting
 Date: 01/23/2016
  - kept worked on local pathfinding
  - developed an efficient formula for determining a curved path
-
-
-For the Next Daily Scrum I will:
- - 1. work on enemy AI
-	 - fix enemy movement system
-	 - advanced features
-		 - pursue
-		 - manage targets
-		 - strafe
-	 - set up aggro system
-	 - animation programming
- - 2. paint stuff for loading and gameover screens
- - 3. fix graphical issues
-	 - fix that tile-depth issue like we talked about (see Improved Tile Depth Solution)
-	 - change that awful yellow tileset

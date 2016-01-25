@@ -311,5 +311,31 @@ End Date: 01/23/2016
 	 - Fix that obnoxious bug with the tile depth
 	 - experiment with large enemies to make sure they work ok
 	 - fix all the menus that look like they were made by a six year old
-	Conclusion: Considering that we executed this sprint during school-weeks, I was pleasantly surprised at how much progress we made. We anticipated that AI would be extremely complex and delicate, and we were right. However, we have a very sophisticated AI that will be easy to adjust in the future. Our pathfinding algorithm is very good, and can be made better if we tweak the level editor a bit. In fact, we have already done the bulk of the work for this improvement, so I see no reason not to implement it. It does bother me a little that we are putting so much faith in the speed boost from GM:studio's compiled code. I would like to experiment with further optimizations before moving out of the sandbox. However, our biggest hurdle is actually in the aesthetic operations of local movement. we attempted to create a secondary pathfinding routine which will govern the enemy's short-term movement between nodes. this is not strictly necessary, but it is an important visual effect that will be difficult to add in later. While we failed to achieve our stated goals, this was not for lack of effort or creativity. We did a full sprint's worth of work, even though we only partially completed a single goal. by actual workload, we completed the larger portion of the assigned tasks. In fact, our concerns with large enemies have been handily dealt with.
-	
+	Conclusion: Considering that we executed this sprint during school-weeks, I was pleasantly surprised at how much progress we made. We anticipated that AI would be extremely complex and delicate, and we were right. However, we have a very sophisticated AI that will be easy to adjust in the future. Our pathfinding algorithm is very good, and can be made better if we tweak the level editor a bit. In fact, we have already done the bulk of the work for this improvement, so I see no reason not to implement it. It does bother me a little that we are putting so much faith in the speed boost from GM:studio's compiled code. I would like to experiment with further optimizations before moving out of the sandbox. However, our biggest hurdle is actually in the aesthetic operations of local movement. we attempted to create a secondary pathfinding routine which will govern the enemy's short-term movement between nodes. this is not strictly necessary, but it is an important visual effect that will be difficult to add in later. While we failed to achieve our stated goals, this was not for lack of effort or creativity. We did a full sprint's worth of work, even though we only partially completed a single goal. by actual workload, we completed the larger portion of the assigned tasks. If there was any failure this sprint, it was in underestimating the amount of time required to complete the assigned tasks.
+
+### Sprint 10:
+Start Date: 01/24/2016
+End Date: 02/06/2016
+
+##### Sprint 10 Goals
+ - 1. Enemy AI
+	 - Complete the basic single player AI
+	 - improve aesthetic path navigation
+	 - Implement camp AI
+	 - implement dynamic group creation
+	 - After finishing the basic guard-type AI, create variants for wandering monsters and stuff
+	 - test in multiplayer
+ - 2. Combat Improvement
+	 - change the way attacking works (pathing, timing etc.)
+	 - make attacks change depending on things like is_airborne and is_jumping
+	 - add graphical indicators to show when a unit is being damaged or knocked back
+	 - add abilities that work
+ - 3. Complete at least one Dungeon
+	 - set up the overworld map better than it is (show information and stuff)
+	 - set up the dungeon generation algorithm to include things like minibosses, bonus objectives, gold count etc.
+	 - put the staircase back in
+	 - create a victory indicator or something
+ - 4. Graphical tinkering
+	 - Fix that obnoxious bug with the tile depth
+	 - experiment with large enemies to make sure they work ok
+	 - fix all the menus that look like they were made by a six year old

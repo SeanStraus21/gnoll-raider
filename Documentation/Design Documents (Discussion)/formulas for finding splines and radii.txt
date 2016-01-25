@@ -38,4 +38,12 @@ Q.y = P.y + r * sin(phi + theta)
 /*
 So now we have these points...
 next we check collisions between the nodes.
-first, start by making sure 
+first, start by making sure the line Q-Dest is pathable
+	if so, make sure the path 
+		if arc is not clear, force the character to pivot longer.
+	if not, increase the 
+
+//is the arc clear? 
+	we want this to be fast. I highly doubt that there will ever be times where there will be obstacles between the curve and the main path
+	that will not block the curve completely. consequently, we just need to check a distance = to 2*r 
+
