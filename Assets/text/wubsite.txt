@@ -1,0 +1,27 @@
+So, you've found it. 
+
+
+See my gamejolt page at http://gamejolt.com/games/gnoll-raider/40566
+for the closest thing I have to an official site.
+
+I really do appreciate any suggestions, feedback, or criticism. After you've spent a certain amount of time designing something, its easy to get lost in the details, and objective, outside viewpoints are always invaluable.
+
+Feel free to judge me, since I take complete responsibility for my actions, and all the stuff I can't take responsibility for I approve retrospectively.
+
+
+About Gnoll Raider:
+	If you read the description, you already know this is a video game. It is a video game in which you control a man-eating hyena creature in order to brave procedurally generated dungeons in search of plunder. The game is a top-down isometric stealth-action-rpg sort of thing (easy on the rpg bit). When I started this game I thought multiplayer was a good idea, so it has that too, even though I've since come to question my reasoning in this area. Characters are customizable, naturally, though I'm still a little hazy on what this is going to finally consist of. 
+	Although it is still in an early stage of development, I do have some working prototypes available on gamejolt. I can't recommend playing them, since all the fun bits are still in development, but it does give you an idea of what I've accomplished so far. 
+	By the way, I work on this game strictly as an amateur and have no plans to monetize it, in case you were worried about that. This game is part of my hobby, which replaces any social life I might otherwise have had.
+
+Game Mechanics
+	At its core, Gnoll Raider is an stealth-based action game. While I originally planned it to have a strong element of grinding for experience and fiddling with equipment, I've sort of 
+
+W
+
+
+
+Is this a game wherein you raid gnolls, play as a gnoll who raids, or fight gnollish raiders?
+	Don't you love ambiguous english adjective syntax? option 2.
+
+

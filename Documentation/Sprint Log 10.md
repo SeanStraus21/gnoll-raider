@@ -8,7 +8,25 @@ Date: 01/24/2016
 
 Day 2 Scrum Meeting:
 Date: 01/25/2016
- - debugged local pathfinding
+ - did a little work on local pathfinding
+
+Day 3 Scrum Meeting:
+Date: 01/26/2016
+ - breakthrough on local pathfinding!
+
+Day 4 Scrum Meeting:
+Date: 01/27/2016
+ - minor debug with rounding stuff
+ - started putting it all together...
+ 
+Day 5 Scrum Meeting:
+Date: 01/28/2016
+ - ALMOST FINISHED WITH IT!
+ 
+Day 6 Scrum Meeting:
+Date: 01/29/2016
+ - ITS DONE! ITS DONE! HAHAHAHAHAHAHAAAAAAAAAAAA!
+ - put that stupid thing to rest.
 
  For the Next Daily Scrum I will:
  - 1. work on enemy AI
