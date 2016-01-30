@@ -1,13 +1,12 @@
 Brief Introduction of Key Concepts:
 
 What is a gnoll? 
-A gnoll is a fantastical creature with characteristics of both humans and hyenas. Like other fantasy stuff, (goblins, elves etc.) the rest is subject to the interpretation of the author.
-If you know this from playing Dungeons and Dragons, welcome. If you know this term from playing some awful game by Blizzard Entertainment, you have my condolences, but you should know that gnolls are actually from Dungeons and Dragons.
+A gnoll is a fantastical creature with characteristics of both humans and hyenas. Like other fantasy stuff, (goblins, elves etc.) the concept is vague and subject to interpretation. 
 
-What is a Zakasi?
-Remember those gnolls I was telling you about? Sort of like that. I have a thing about using material developed by other people, so this is my way of putting distance between my variant of the species and the famous Dungeons & Dragons monster. Incidentally, "zakasi" is just the gnollish word for "gnoll", i.e., what they refer to themselves as in their own language.
+What is a Zakasi??
+Remember those gnolls I was telling you about? These are, more or less, exactly the same thing. I have certain reservations about using material developed by other people, so this is my way of putting distance between a particular variant of the species and the famous Dungeons & Dragons monster. Incidentally, "zakasi" is just the gnollish word for "gnoll", within the confines of this game's internal universe.
 
-Okay, you can figure out the rest for yourself. 
+At this point you can probably figure out the rest for yourself. 
 
 ##A Brief, Spoiler-Free Description of the Gnoll Raider Story:
 ###Preface:
