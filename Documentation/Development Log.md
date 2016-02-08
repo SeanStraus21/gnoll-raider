@@ -339,3 +339,25 @@ End Date: 02/06/2016
 	 - Fix that obnoxious bug with the tile depth
 	 - experiment with large enemies to make sure they work ok
 	 - fix all the menus that look like they were made by a six year old
+	Conclusion: I like to divide this sprint into two subsprints I call week one and week two. Week one was great, we accomplished a lot, fixed some bugs with the AI, started working on an advanced dungeon generation algorithm, almost got the thing ready for production, and then... we hit week two. So in conclusion, we got about half the work done that we wanted to get done, and one week of graphics that we can't use yet.
+	
+### Sprint 11:
+Start Date: 02/07/2016
+End Date: 02/20/2016
+ - 1. Complete at least one Dungeon
+	 - set up the overworld map better than it is (show information and stuff)
+	 - set up the dungeon generation algorithm to include things like minibosses, bonus objectives, gold count etc.
+	 - put the staircase back in
+	 - create a victory indicator or something
+ - 2. Graphical tinkering
+	 - Fix that obnoxious bug with the tile depth
+	 - experiment with large enemies to make sure they work ok
+	 - fix all the menus that look like they were made by a six year old
+ - 3. AI and Combat Tweaks
+	 - change the way attacking works (pathing, timing etc.)
+	 - make attacks change depending on things like is_airborne and is_jumping
+	 - add graphical indicators to show when a unit is being damaged or knocked back
+	 - add abilities that work
+	 - Implement camp AI
+	 - implement dynamic group creation
+	 - create variant AI for wandering monsters and special enemies

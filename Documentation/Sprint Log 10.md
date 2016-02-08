@@ -28,16 +28,35 @@ Date: 01/29/2016
  - ITS DONE! ITS DONE! HAHAHAHAHAHAHAAAAAAAAAAAA!
  - put that stupid thing to rest.
 
- For the Next Daily Scrum I will:
- - 1. work on enemy AI
-	 - fix enemy movement system
-	 - advanced features
-		 - pursue
-		 - manage targets
-		 - strafe
-	 - set up aggro system
-	 - animation programming
- - 2. paint stuff for loading and gameover screens
- - 3. fix graphical issues
-	 - fix that tile-depth issue like we talked about (see Improved Tile Depth Solution)
-	 - change that awful yellow tileset
+Day 7 Scrum Meeting:
+Date: 01/30/2016
+ - started making sprites to visually represent the AI
+
+Day 8 Scrum Meeting:
+Date: 02/31/2016
+ - ported AI over to Game Maker Studio
+ - continued working on animation
+
+Day 9 Scrum Meeting:
+Date: 02/01/2016
+ - worked out gold distribution model
+
+Day 10 Scrum Meeting:
+Date: 02/02/2016
+ - nothing whatsoever
+
+Day 11 Scrum Meeting:
+Date: 02/03/2016
+ - homework
+
+Day 12 Scrum Meeting:
+Date: 02/04/2016
+ - started painting for some reason
+
+Day 13 Scrum Meeting:
+Date: 02/05/2016
+ - kept on painting
+
+Day 14 Scrum Meeting:
+Date: 02/06/2016
+ - still painting
