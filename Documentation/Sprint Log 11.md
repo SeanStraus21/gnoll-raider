@@ -5,6 +5,12 @@ end date: 02/20/2016 <br>
 Day 1 Scrum Meeting:
 Date: 02/07/2016
  - 
+ 
+Day 2 Scrum Meeting:
+Date: 02/082016
+ - 
+
+
 
  For the Next Daily Scrum I will:
  - 1. Dungeon Setup
