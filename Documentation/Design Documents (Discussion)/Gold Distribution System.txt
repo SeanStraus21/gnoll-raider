@@ -46,6 +46,17 @@ for(i=1;i<(n+1)/2;i+=1){
 }
 l_add(average)
 
+
+Once you have the list of amounts, assign each chamber its amount
+1. create a list of all rooms
+2. for each chest,
+	2a. generate a random number "num" between zero and chamber_count
+	2b. pop the chamber at num
+	2c. put the chest in that room
+
+
+
+
 Treasure:
 
 1. divide treasure amount into small chests.
@@ -83,9 +94,20 @@ this seems like a good ratio.
 
 Total Gold
 	Coins
-		
+		Coins per Chamber
 	Chests
-		
+		small
+		medium
+		large
+		super
+
+create a list of all rooms
+for each chest,
+	generate a random number "num" between zero and chamber_count
+	pop the chamber at num
+	put the chest in that room
+
+
 
 
 
