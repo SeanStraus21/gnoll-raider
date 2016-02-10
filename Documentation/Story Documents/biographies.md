@@ -54,7 +54,7 @@
  - Religion/Culture: traditional yeenoghuism/ Shiharana zakasi culture
  - Ethical System: Khurikash Thieves' Code (Pseudo-Religious Social Contract)
  - Hobbies: Fighting, Drinking, Feasting, Gambling (a.k.a the usual)
- - Personaliy Traits: Sarcastic, pragmatic, short-tempered, greedy, pessimistic
+ - Personality Traits: Sarcastic, pragmatic, short-tempered, greedy, pessimistic
  - Likes: Night attacks, ambushes, 
  - Dislikes
 
